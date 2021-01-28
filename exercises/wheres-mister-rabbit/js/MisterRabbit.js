@@ -1,5 +1,5 @@
-class SausageDog extends Animal {
-// added "extends Animal" to define SausageDog class as child of Animal
+class MisterRabbit extends Animal {
+// added "extends Animal" to define MisterRabbit class as child of Animal
   constructor(x, y, image) {
 //super calls Animal's constructor values
     super(x, y, image);

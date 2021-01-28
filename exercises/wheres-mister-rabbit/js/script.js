@@ -11,8 +11,8 @@ const NUM_ANIMALS = 100 ;
 let animalImages = [];
 let animals = [];
 
-let sausageDogImage = undefined;
-let sausageDog = undefined;
+let misterRabbitImage = undefined;
+let misterRabbit = undefined;
 
 function preload() {
 // creating for loop counting animal images from 0 to 9
@@ -21,7 +21,7 @@ function preload() {
     animalImages.push(animalImage);
   }
 
-  sausageDogImage = loadImage(`assets/images/sausage-dog.png`);
+  misterRabbitImage = loadImage(`assets/images/mister-rabbit.png`);
 }
 
 function setup() {
@@ -38,7 +38,7 @@ function setup() {
 
     let x = random(0, width);
     let y = random(0, height);
-    sausageDog = new SausageDog(x, y, sausageDogImage);
+    misterRabbit = new MisterRabbit(x, y, misterRabbitImage);
 }
 
 function draw() {
@@ -48,9 +48,9 @@ function draw() {
     animals[i].update();
   }
   
-  sausageDog.update();
+  misterRabbit.update();
 }
 
 function mousePressed() {
-  sausageDog.mousePressed();
+  misterRabbit.mousePressed();
 }
