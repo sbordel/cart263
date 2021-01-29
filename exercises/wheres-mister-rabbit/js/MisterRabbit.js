@@ -19,6 +19,11 @@ class MisterRabbit extends Animal {
   mousePressed() {
     if (this.overlap(mouseX, mouseY)) {
         this.found = true;
+        misterRabbitSFX.play();
+    }
+    else {
+      this.found = false;
+      bunnySFX.play();
     }
   }
 }
