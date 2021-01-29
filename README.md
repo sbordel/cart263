@@ -1,8 +1,12 @@
 # cart263
 ## repository for CART263 
 
-[activities](https://sbordel.github.io/cart263/activities/)
+###activities
 
-[exercises](https://sbordel.github.io/cart263/exercises/)
+[A1: where's sausage dog?](https://sbordel.github.io/cart263/activities/wheres-sausage-dog/index.html)
 
-[projects](https://sbordel.github.io/cart263/projects/) 
+###exercises
+
+[E1: where's mister rabbit?](https://sbordel.github.io/cart263/exercises/wheres-mister-rabbit/index.html)
+
+###projects
