@@ -1,8 +1,8 @@
 # cart263
 ## repository for CART263 
 
-[activities](../tree/main/activities)
+[activities](https://sbordel.github.io/cart263/activities/)
 
-[exercises](../tree/main/exercises)
+[exercises](https://sbordel.github.io/cart263/exercises/)
 
-[projects](../tree/main/projects) 
+[projects](https://sbordel.github.io/cart263/projects/) 
