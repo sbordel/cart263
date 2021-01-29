@@ -5,7 +5,7 @@ class MisterRabbit extends Animal {
     super(x, y, image);
 
     this.found = false;
-    this.rotationSpeed = 0.25;
+    this.rotationSpeed = 0.1;
   }
 
   update() {
