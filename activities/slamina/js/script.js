@@ -137,9 +137,10 @@ const animals = [
     "zebra"
   ];
 
-  let currentAnimal = ``;
-  let currentAnswer = ``;
+  const QUESTION_DELAY = 2000; 
 
+  let currentAnimal = `Click to begin`;
+  let currentAnswer = ``;
 function setup() {
     createCanvas(windowWidth, windowHeight)
 
@@ -160,6 +161,11 @@ function setup() {
 function draw() {
     background(0);
 
+    
+    displayAnswer();
+}
+
+function displayAnswer() {
     if (currentAnswer === currentAnimal) {
         fill(0, 255, 0)
     }
@@ -169,16 +175,11 @@ function draw() {
     text(currentAnswer, width / 2, height / 2);
 }
 
-function mousePressed() {
- currentAnimal = random(animals);
- let reverseAnimal = reverseString(currentAnimal);
+function sayAnimalBackwards(animal) {
+ let reverseAnimal = reverseString(animal);
  responsiveVoice.speak(reverseAnimal);
 }
 
-function guessAnimal(animal) {
-    currentAnswer = animal.toLowerCase();
-    console.log(currentAnswer);
-}
 
 //Reverses the provided string
 
@@ -192,3 +193,26 @@ function reverseString(string) {
     // Return the result
     return result;
   } 
+
+  /**
+Called by annyang when the user make a guess.
+animal parameter contains the guess as a string.
+Sets the answer text to the guess.
+*/
+function guessAnimal(animal) {
+    // Convert the guess to lowercase to match the answer format
+    currentAnswer = animal.toLowerCase();
+  }
+  
+  //Reset the answer text, get a new random animal, say its name
+
+  function nextQuestion() {
+    currentAnswer = ``;
+    currentAnimal = random(animals);
+    sayAnimalBackwards(currentAnimal);
+  }
+  
+  //When the user clicks, go to the next question
+  function mousePressed() {
+    nextQuestion();
+  }
