@@ -139,19 +139,20 @@ const animals = [
 
   const QUESTION_DELAY = 2000; 
 
-  let currentAnimal = `Click to begin`;
-  let currentAnswer = ``;
+  let currentAnswer = `Click to begin.`;
+  let currentAnimal = ``;
+
 function setup() {
-    createCanvas(windowWidth, windowHeight)
+    createCanvas(windowWidth, windowHeight);
 
     if (annyang) {
         let commands = {
           'I think it is *animal': guessAnimal
         };
-        annyang.addCommands(commands)
+        annyang.addCommands(commands);
         annyang.start();
 
-        textSize(32);
+        textSize(100);
         textStyle(BOLD);
         textAlign(CENTER);
     }
@@ -167,7 +168,7 @@ function draw() {
 
 function displayAnswer() {
     if (currentAnswer === currentAnimal) {
-        fill(0, 255, 0)
+        fill(0, 255, 0);
     }
     else{
         fill(255, 0, 0);
@@ -194,11 +195,7 @@ function reverseString(string) {
     return result;
   } 
 
-  /**
-Called by annyang when the user make a guess.
-animal parameter contains the guess as a string.
-Sets the answer text to the guess.
-*/
+
 function guessAnimal(animal) {
     // Convert the guess to lowercase to match the answer format
     currentAnswer = animal.toLowerCase();
