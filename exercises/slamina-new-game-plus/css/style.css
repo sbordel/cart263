@@ -1,6 +1,15 @@
 /*********************************************
 
 **********************************************/
+@font-face {
+  font-family: fontOne ;
+  src: url(../assets/fonts/format-1452-master/fonts/webfonts/Format_1452.woff);
+}
+
+@font-face {
+  font-family: fontTwo ;
+  src: url(../assets/fonts/risk-of-rain/riskofrainfont.ttf);
+}
 
 body {
   padding: 0;
@@ -10,4 +19,5 @@ body {
   align-content: center;
   height: 100vh; /* Body is the height of the viewport */
   overflow: hidden; /* Hide anything that goes off the window size */
+  font-family: "fontOne" ;
 }
