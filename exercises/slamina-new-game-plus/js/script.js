@@ -22,6 +22,8 @@ function preload() {
 
   mushrooms = toxicMush.concat(edibleMush);
 
+  randomMush = random(mushrooms);
+
    /* textSize(70);
     textStyle(BOLD);
     textAlign(CENTER);
@@ -48,24 +50,25 @@ function draw() {
   background(194, 201, 252);
 
   imageMode(CENTER);
-  let randomMush = random(mushrooms);
-
   image(randomMush, width / 2, height / 2);
 
   noLoop();
-
 }
 
 function toxicGuess() {
+
   if (toxicMush.includes(randomMush)){
     responsiveVoice.speak("this mushroom is toxic", "UK English Female", {onend: newMushroom}, {pitch: 6});
   }
   else {
     responsiveVoice.speak("this mushroom is edible", "UK English Female", {onend: newMushroom}, {pitch: 0.5});
   }
+
+  randomMush = random(mushrooms);
+  console.log(mushrooms.length);
 }
 
 function newMushroom(){
- draw(randomMush);
+ draw();
 }
 
