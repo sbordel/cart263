@@ -36,7 +36,7 @@ function setup() {
   toxicButton.mousePressed(toxicGuess);
 
   edibleButton = createButton('edible');
-  edibleButton.position(width * 0.2, height / 2, 65);
+  edibleButton.position(width * 0.15, height / 2, 65);
   edibleButton.mousePressed(toxicGuess);
 
   textSize(64);
