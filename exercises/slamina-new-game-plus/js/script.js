@@ -57,7 +57,7 @@ function draw() {
 }
 
 function toxicGuess() {
-  if (toxicMush.includes(image)){
+  if (toxicMush.includes(randomMush)){
     responsiveVoice.speak("this mushroom is toxic", "UK English Female", {onend: newMushroom}, {pitch: 6});
   }
   else {
