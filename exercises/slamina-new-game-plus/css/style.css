@@ -19,5 +19,17 @@ body {
   align-content: center;
   height: 100vh; /* Body is the height of the viewport */
   overflow: hidden; /* Hide anything that goes off the window size */
-  font-family: "fontOne" ;
+}
+
+#answer{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "fontTwo";
+  font-size: 100px;
+  top: 30%;
+  z-index: 0;
 }
