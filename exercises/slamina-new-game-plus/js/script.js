@@ -71,4 +71,3 @@ function toxicGuess() {
 function newMushroom(){
  draw();
 }
-
