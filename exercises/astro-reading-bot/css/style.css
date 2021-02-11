@@ -18,3 +18,73 @@ body {
   height: 100vh; /* Body is the height of the viewport */
   overflow: hidden; /* Hide anything that goes off the window size */
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.window{
+  display: block;
+  margin: auto;
+  margin-top: 20%;
+  max-width: 50%;
+  padding: 2%;
+  border: 2px outset #C0C0C0;
+  background-color: #C0C0C0;
+}
+
+input[type=text], select, textarea{
+  padding: 5px;
+  border: 2px inset #B0B0B0;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=text], textarea {
+  width: 80%;
+}
+
+select, #inputDay {
+  width: 50%;
+}
+
+label {
+  font-size: 16px;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #0000ff;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  border: 2px outset #0000ff;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  opacity: 1;
+  margin-top:10px;
+}
+
+input[type=submit]:hover {
+  background-color: #3366ff;
+}
+
+.col-big {
+  float: left;
+  width: 50%;
+  margin-top: 4px;
+}
+
+.col-small {
+  float: left;
+  width: 50%;
+  margin-top: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
