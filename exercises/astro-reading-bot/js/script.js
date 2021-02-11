@@ -1,10 +1,10 @@
 "use strict";
 
 let spyProfile = {
-    name: `**REDACTED**`,
-    alias: `**REDACTED**`,
-    secretWeapon: `**REDACTED**`,
-    password: `**REDACTED**`,
+    name: `?`,
+    alias: `?`,
+    secretWeapon: `?`,
+    password: `?`,
 };
 
 let instrumentData = undefined;
@@ -12,9 +12,7 @@ let objectData = undefined;
 let tarotData = undefined;
 
 function preload() {
-    tarotData = loadJSON(`https://raw.githubusercontent.com/dariusk/corpora/master/data/divination/tarot_interpretations.json`);
-    instrumentData = loadJSON(`https://raw.githubusercontent.com/dariusk/corpora/master/data/music/instruments.json`);   
-    objectData = loadJSON(`https://raw.githubusercontent.com/dariusk/corpora/master/data/objects/objects.json`);  
+    zodiacData = loadJSON(`json/zodiac-animals.json`);
 }
 
 function setup() {
