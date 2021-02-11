@@ -14,31 +14,33 @@
     <script src="js/libraries/p5.sound.min.js"></script>
 
     <!-- My script(s) -->
+    <script src="js/zodiac-signs.js"></script>
     <script src="js/script.js"></script>
   </head>
   <body>
   
   <div class="container">
-    <form class="window">
+    <form class="window" onsubmit="return getUserData()">
     <div class="row">
       <div class="col-big">
-        <label for="fname">USERNAME</label>
+        <label>USERNAME</label>
       </div>
       <div class="col-small">
-        <input type="text" id="fname" name="username" placeholder=".......???">
+        <input type="text" id="username" name="username" placeholder="?">
       </div>
     </div>
     
     <div class="row">
     
       <div class="col-big">
-        <label for="birthday">BIRTHDAY</label>
+        <label>BIRTHDAY</label>
       </div>
       
       <div class="col-small">
-        <input type="text" id="inputDay" name="day" placeholder="??">
+        <input type="text" id="inputDay" name="day" placeholder="?day?">
   
         <select id="inputMonth" name="month">
+          <option value="--">?month?</option>
           <option value="january">january</option>
           <option value="february">february</option>
           <option value="march">march</option>
