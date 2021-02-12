@@ -1,38 +1,43 @@
+
 "use strict";
 
-let dayOfBirth; 
-let monthOfBirth; 
-let birthday = monthOfBirth + ` ` + dayOfBirth ;
+//let username = document.getElementById("username").value;
+let dayOfBirth =  document.getElementById(`inputDay`);
+let monthOfBirth = document.getElementById(`inputMonth`).value;
 
-let username;
+let birthday = monthOfBirth + " " + dayOfBirth;
 
-let profileWindow;
-
-
+/*
 let zodiacProfile = {
-    username: `?`,
-    birthday: `?`,
-    zodiacSign: `?`,
-    animal: `?`,
-};
+  username: ``,
+  birthday: ``,
+  zodiacSign: `??`,
+  animal: `??`,
+}; */
 
 let zodiacData = undefined;
 
-let submitOK = generateZodiacProfile();
-
 function preload() {
-    zodiacData = loadJSON(`js/json/zodiac-animals.json`);
+  zodiacData = loadJSON('js/zodiac-animals.json');
+
+    let modal = document.getElementById("popUp");
+    modal.style.display = "fixed";
+
+    let closeButton = document.getElementsByClassName("close")[0];
+    
+    closeButton.onclick = function() {
+    modal.style.display = "none";
+  }
 }
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
 
-    /*
     let data = JSON.parse(localStorage.getItem(`zodiac-profile-data`));
-    if (data !== null) {
-       let username = prompt(`what is your username?`);
+     if (data !== null) {
        if (username === data.username){
         }
+    
         zodiacProfile.username = data.username;
         zodiacProfile.birthday = data.birthday;
         zodiacProfile.zodiacSign = data.zodiacSign;
@@ -40,60 +45,44 @@ function setup() {
     }
     else {
         generateZodiacProfile();
-    }*/
+    } 
 }
 
-function getUserData() {
-  username = document.getElementById(`username`).value;
-  dayOfBirth =  document.getElementById(`inputDay`).value;
-  monthOfBirth = document.getElementById(`inputMonth`).value;
-  submitOK = `true`;
-
-  if (username == ``) {
-    alert(`plz fill in ur username`);
-    submitOK = `false`;
-  }
-  if (isNaN(dayOfBirth) || dayOfBirth < 1 || dayOfBirth > 31) {
-    alert(`plz write in the day of your birth as a number between 1 and 31`);
-    submitOK = `false`;
-  }
-  if (monthOfBirth == `--`) {
-    alert(`plz select a month`);
-    submitOK = `false`;
-  }
-  if (submitOK == `false`) {
-    return false;
-  }
-  if (submitOK == `true`){
-    generateZodiacProfile();
-  };
+function profileSubmitted(){
+    document.getElementById("animalInput").innerHTML = "U ARE...." + " " + ${animal};
 }
 
 function generateZodiacProfile() {
-    //zodiacProfile.username = ;
+  zodiacProfile.username = prompt(`plz write a username`);
     
+    //let instrument = random(instrumentData.instruments);
+    //zodiacProfile.username = `The ${instrument}`;
+    //spyProfile.secretWeapon = random(objectData.objects);
 
+    localStorage.setItem(`zodiac-profile-data`, JSON.stringify(zodiacProfile));
+}
 
-    //localStorage.setItem(`zodiac-profile-data`, JSON.stringify(zodiacProfile));
+function profileSubmitted(){
+    let profile = `if your zodiac sign was an animal
+   
+    USERNAME: ${zodiacProfile.username}
+    BIRTHDAY: ${zodiacProfile.birthday}
+    ZODIAC SIGN: ${zodiacProfile.zodiacSign}
+    ANIMAL: ${zodiacProfile.animal}`;
+
+    let hiddenSection = document.getElementsByClassName("hidden-section");
+    hiddenSection.style.display = "block";
 }
 
 function draw() {
-
-    //push();
-    //profileWindow = document.getElementById(`window`);
-    //pop();
-
-    /*
-    username: ${username.name}
-    birthday: ${birthday.name}
-    zodiac sign: ${zodiacSign.name}
-    animal: ${animal.name}`;
+/*
     push();
-    textFont(`Courier, monospace`);
-    textSize(24);
+    textFont(`Times New Roman`);
+    textSize(18);
     textAlign(LEFT, TOP);
-    fill(255);
-    text(zodiacProfile, 100, 100);
+    fill(0);
+    strokeWeight(0.2);
+    text(profile, 100, 100);
 
     pop();*/
 }

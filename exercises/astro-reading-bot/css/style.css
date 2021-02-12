@@ -1,16 +1,7 @@
-/*********************************************
 
-Here is a description of any special CSS used.
-In this case it's just padding and margin to 0
-and then centring the canvas (and anything else)
-using the CSS Grid.
-
-Also hides overflow.
-
-**********************************************/
 
 body {
-  background: rgb(238,224,255);
+  background: #eee0ff;
   background: radial-gradient(circle, rgba(238,224,255,1) 27%, rgba(132,130,255,1) 100%);
   padding: 0;
   margin: 0;
@@ -25,67 +16,98 @@ body {
   box-sizing: border-box;
 }
 
-.window{
-  display: block;
-  margin: auto;
+/*    MODAL    */
+#popUp {
+  display: hidden;
+  z-index: 1;
   margin-top: 50%;
-  max-width: 40%;
-  padding: 2%;
-  border: 2px outset #C0C0C0;
+  margin-left: 40%;
+  margin-right: 10px;
+  width: 320px;
+  border: 4px outset #C0C0C0;
   background-color: #C0C0C0;
 }
 
-input[type=text], select, textarea{
-  padding: 5px;
-  border: 2px inset #B0B0B0;
-  border-radius: 4px;
-  resize: vertical;
+#inside-modal {
+  padding: 0 0 0 5%;
+  display: table;
 }
 
-input[type=text], textarea {
-  width: 80%;
+.close {
+  color: #B0B0B0;
+  float: right;
+  font-size: 20px;
+  margin-top: 1px;
+  margin-right: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
 }
 
-select, #inputDay {
-  width: 50%;
-}
-
-label {
-  font-size: 16px;
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-input[type=submit] {
-  padding: 2px;
+.close:hover,
+.close:focus {
+  color: #000;
+  cursor: pointer;
+  border: 1px dotted #000000;
+  padding-top: -2px;
   padding-left: 7px;
   padding-right: 7px;
-  border: 0.5px solid #A0A0A0;
-  border-radius: 5px;
-  cursor: pointer;
-  float: right;
-  opacity: 1;
-  margin-top:10px;
+}
+/*   -----    */
+
+.section {
+  display: block;
+  float: left;
+  margin: 20px;
 }
 
-input[type=submit]:hover {
+input[type=text], select{
+  display: table;
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 15px;
+  border: 2px inset #B0B0B0;
+}
+
+h2 {
+  font-size: 18px;
+  padding: 0 12px 12px 0;
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 30px;
+}
+
+#animalInput {
+  font-size: 18px;
+  padding: 0 12px 0 12px;
+  font-weight: normal;
+}
+
+#animalImage {
+  width: 50%;
+  margin-top: -10px;
+}
+
+.hidden-section {
+  display: none;
+  float: left;
+  margin: 0 20px 0 20px;
+}
+
+button {
+  padding: 5px 9px 5px 9px ;
+  border: 0.5px solid #A0A0A0;
+  border-radius: 7px;
+  font-size: 14px;
+  cursor: pointer;
+  float: right;
+  background-color: #eee0ff;
+  opacity: 1;
+}
+
+button:hover {
   background-color: #3366ff;
 }
 
-.col-big {
-  float: left;
-  width: 50%;
-  margin-top: 4px;
-}
-
-.col-small {
-  float: left;
-  width: 50%;
-  margin-top: 10px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+#animal-pic{
+  width: 100px;
 }

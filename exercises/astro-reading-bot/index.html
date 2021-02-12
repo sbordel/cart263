@@ -14,31 +14,26 @@
     <script src="js/libraries/p5.sound.min.js"></script>
 
     <!-- My script(s) -->
-    <script src="js/zodiac-signs.js"></script>
     <script src="js/script.js"></script>
   </head>
-  <body>
-  
-  <div class="container">
-    <form class="window" onsubmit="return getUserData()">
-    <div class="row">
-      <div class="col-big">
-        <label>USERNAME</label>
-      </div>
-      <div class="col-small">
-        <input type="text" id="username" name="username" placeholder="?">
-      </div>
-    </div>
-    
-    <div class="row">
-    
-      <div class="col-big">
-        <label>BIRTHDAY</label>
-      </div>
-      
-      <div class="col-small">
-        <input type="text" id="inputDay" name="day" placeholder="?day?">
-  
+  <body onload="">
+
+<!-- pop up modal -->
+
+  <div id="popUp" class="modal">
+  <span class="close">&times;</span>
+    <div id="inside-modal">
+
+      <div class="section">
+          <h2>USERNAME</h2>
+          <input type="text" id="username" name="username" placeholder="?username?">
+        </div>
+<br><br><br>
+
+<!--
+<div class="section">
+        <h2>BIRTHDAY</h2>
+      <input type="text" id="inputDay" name="day" placeholder="?day?">
         <select id="inputMonth" name="month">
           <option value="--">?month?</option>
           <option value="january">january</option>
@@ -54,12 +49,17 @@
           <option value="november">november</option>
           <option value="december">december</option>
         </select>
-      </div>
+        </div>-->
+
+        <div class="hidden-section">
+            <p id="animalInput" name="animal">U ARE....</p>
+            <img id="animalImage" src="assets/images/no-image.png" alt="no image">
+          </div>
+        <button id="submitButton" onclick="profileSubmitted()">⇨ ⇨ ⇨</button>
+        <br><br><br>
     </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-    </form>
+    <br><br>
+  </div>
   </div>
   
   </body>

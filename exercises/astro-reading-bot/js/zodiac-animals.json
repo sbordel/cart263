@@ -6,132 +6,61 @@
         "Aries": {
             "hypothetical-animal": "common-opossum",
             "hypo-animal-pic": "../../assets/images/common-opossum.jpg",
-            "longitude_start": "0",
-            "longitude_end": "30",
-            "svg_symbol": " ",
-            "unicode_symbol": "♈",
-            "gloss": "The Ram",
-            "element": "Fire",
             "keywords": ["driven", "idealistic", "aggressive"]
         },
         "Taurus": {
             "hypothetical-animal": "earless-seal",
             "hypo-animal-pic": "../../assets/images/earless-seal.jpg",
-            "longitude_start": "30",
-            "longitude_end": "60",
-            "svg_symbol": " ",
-            "unicode_symbol": "♉",
-            "gloss": "The Bull",
-            "element": "Earth",
             "keywords": ["resolute", "sensual", "indulgent"]
         },
         "Gemini": {
             "hypothetical-animal": "red-panda",
             "hypo-animal-pic": "../../assets/images/red-panda.jpg",
-            "longitude_start": "60",
-            "longitude_end": "90",
-            "svg_symbol": " ",
-            "unicode_symbol": "♊",
-            "gloss": "The Twins",
-            "element": "Air",
             "keywords": ["playful", "curious", "two-faced"]
         },
         "Cancer": {
             "hypothetical-animal": "bunny",
             "hypo-animal-pic": "../../assets/images/bunny.jpg",
-            "longitude_start": "90",
-            "longitude_end": "120",
-            "svg_symbol": " ",
-            "unicode_symbol": "♋",
-            "gloss": "The Crab",
-            "element": "Water",
             "keywords": ["nurturing", "snobby", "petty"]
         },
         "Leo": {
             "hypothetical-animal": "black-swan",
             "hypo-animal-pic": "../../assets/images/black-swan.jpg",
-            "longitude_start": "120",
-            "longitude_end": "150",
-            "svg_symbol": " ",
-            "unicode_symbol": "♌",
-            "gloss": "The Lion",
-            "element": "Fire",
             "keywords": ["fierce", "opulent", "narcissistic"]
         },
         "Virgo": {
             "hypothetical-animal": "platypus",
             "hypo-animal-pic": "../../assets/images/platypus.jpg",
-            "longitude_start": "150",
-            "longitude_end": "180",
-            "unicode_symbol": "♍",
-            "gloss": "The Maiden",
-            "element": "Earth",
             "keywords": ["meticulous", "helpful", "naive"]
         },
         "Libra": {
             "hypothetical-animal": "duck",
             "hypo-animal-pic": "../../assets/images/duck.jpg",
-            "longitude_start": "180",
-            "longitude_end": "210",
-            "svg_symbol": " ",
-            "unicode_symbol": "♎",
-            "gloss": "The Scales",
-            "element": "Air",
             "keywords": ["balanced", "chatty", "indecisive"]
         },
         "Scorpio": {
             "hypothetical-animal": "crow",
             "hypo-animal-pic": "../../assets/images/crow.jpg",
-            "longitude_start": "210",
-            "longitude_end": "240",
-            "svg_symbol": " ",
-            "unicode_symbol": "♏",
-            "gloss": "The Scorpion",
-            "element": "Water",
             "keywords": ["deep", "magnetic", "destructive"]
         },
         "Sagittarius": {
             "hypothetical-animal": "mouse-lemur",
             "hypo-animal-pic": "../../assets/images/mouse-lemur.jpg",
-            "longitude_start": "240",
-            "longitude_end": "270",
-            "svg_symbol": " ",
-            "unicode_symbol": "♐",
-            "gloss": "The Archer",
-            "element": "Fire",
             "keywords": ["ambitious", "daring", "coarse"]
         },
         "Capricorn": {
             "hypothetical-animal": "saw-whet-owl",
             "hypo-animal-pic": "../../assets/images/saw-whet-owl.jpg",
-            "longitude_start": "270",
-            "longitude_end": "300",
-            "svg_symbol": " ",
-            "unicode_symbol": "♑",
-            "gloss": "The Mountain Sea-goat",
-            "element": "Earth",
             "keywords": ["responsible", "awkward", "rigid"]
         },
         "Aquarius": {
             "hypothetical-animal": "axolotl",
             "hypo-animal-pic": "../../assets/images/axolotl.jpg",
-            "longitude_start": "300",
-            "longitude_end": "330",
-            "svg_symbol": " ",
-            "unicode_symbol": "♒",
-            "gloss": "The Water-bearer",
-            "element": "Air",
             "keywords": ["inventive", "zany", "erratic"]
         },
         "Pisces": {
             "hypothetical-animal": "two-toed-sloth",
             "hypo-animal-pic": "../../assets/images/two-toed-sloth.jpg",
-            "longitude_start": "330",
-            "longitude_end": "360",
-            "svg_symbol": " ",
-            "unicode_symbol": "♓",
-            "gloss": "The Fish",
-            "element": "Water",
             "keywords": ["artistic", "sentimental", "dependent"]
         }
     }
