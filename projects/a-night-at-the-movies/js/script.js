@@ -9,11 +9,11 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     backgroundImg = loadImage('assets/images/background.png')
 
-    shirtWhite = createSprite(windowHalfX * 1.5, windowHalfY * 1.5);
+    shirtWhite = createSprite(windowHalfX * 1.5, windowHalfY * 1.60);
     shirtWhite.addAnimation('normal' , 'assets/sprites/shirt1.png' , 'assets/sprites/shirt4.png');
     shirtWhite.addAnimation('angry' , 'assets/sprites/shirt1.png' , 'assets/sprites/shirt2.png');
 
-    shirtPlaid = createSprite(windowHalfX / 2, windowHalfY * 1.5);
+    shirtPlaid = createSprite(windowHalfX / 1.8, windowHalfY * 1.60);
     shirtPlaid.addAnimation('normal' , 'assets/sprites/wshirt1.png' , 'assets/sprites/wshirt4.png');
     shirtPlaid.addAnimation('angry' , 'assets/sprites/wshirt1.png' , 'assets/sprites/wshirt2.png');
 
