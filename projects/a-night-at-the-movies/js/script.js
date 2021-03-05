@@ -1,45 +1,47 @@
-let shirtPlaid, shirtWhite;
-let windowHalfX = window.innerWidth / 2;
-let windowHalfY = window.innerHeight / 2;
+/***************
+                                ___       _ _                                       _                    
+ ___ _   _ _ __  _ __  _   _   ( _ )     (_|_)_ __ ___  _ __ ___  _   _       _ __ (_) ___ _ __ _ __ ___ 
+/ __| | | | '_ \| '_ \| | | |  / _ \/\   | | | '_ ` _ \| '_ ` _ \| | | |_____| '_ \| |/ _ \ '__| '__/ _ \
+\__ \ |_| | | | | | | | |_| | | (_>  <   | | | | | | | | | | | | | |_| |_____| |_) | |  __/ |  | | |  __/
+|___/\__,_|_| |_|_| |_|\__, |  \___/\/  _/ |_|_| |_| |_|_| |_| |_|\__, |     | .__/|_|\___|_|  |_|  \___|
+                       |___/           |__/                       |___/      |_|                         
+Sunny and Jimmy-Pierre
+sam bordeleau
+
+Sunny and Jimmy-Pierre is a reinterpretation of David Lynch's notoriously infamous 
+(and oh so sadly unpopular) short movie titled "Pierre and Sonny Jim" taking form as a web-based game.
+****************/
+
+let balloonSunny;
 
 function preload() {
+  balloonSunny = loadModel('assets/3D/balloons.obj', true);
+  //balloonMtl = loadImage('assets/3D/balloons.mtl');
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
-    backgroundImg = loadImage('assets/images/background.png')
-
-    shirtWhite = createSprite(windowHalfX * 1.5, windowHalfY * 1.60);
-    shirtWhite.addAnimation('normal' , 'assets/sprites/shirt1.png' , 'assets/sprites/shirt4.png');
-    shirtWhite.addAnimation('angry' , 'assets/sprites/shirt1.png' , 'assets/sprites/shirt2.png');
-
-    shirtPlaid = createSprite(windowHalfX / 1.8, windowHalfY * 1.60);
-    shirtPlaid.addAnimation('normal' , 'assets/sprites/wshirt1.png' , 'assets/sprites/wshirt4.png');
-    shirtPlaid.addAnimation('angry' , 'assets/sprites/wshirt1.png' , 'assets/sprites/wshirt2.png');
-
-    shirtPlaid.mouseActive, shirtPlaid.mouseActive = true;
+  createCanvas(windowWidth, windowHeight, WEBGL);
 }
 
 function draw() {
-    background(backgroundImg);
+  background(0);
 
-   // animation(shirtWhite, windowHalfX , windowHalfY);
+  let locX = mouseX - height / 2;
+  let locY = mouseY - width / 2;
 
-// -- plaid shirt on mouse over --
-    if(shirtPlaid.mouseIsOver){
-       shirtPlaid.changeAnimation('angry')
-  }
-    else {
-       shirtPlaid.changeAnimation('normal')
-  }
 
-// -- white shirt on mouse over --
-    if(shirtWhite.mouseIsOver){
-       shirtWhite.changeAnimation('angry')
-  }
-    else {
-       shirtWhite.changeAnimation('normal')
-  };
+  ambientLight(60, 60, 60);
+  pointLight(255, 255, 255);
 
-    drawSprites();
+  push();
+  noStroke();
+  scale(3);
+  ambientMaterial(255);
+  rotateZ(PI);
+  rotateY(PI);
+  //rotateX(frameCount * 0.01);
+  //rotateY(frameCount * 0.01);
+  model(balloonSunny);
+  pop();
+
 }
