@@ -24,11 +24,10 @@ function setup() {
 }
 
 function draw() {
-  //clear();
   background(255, 0);
 
-  let locX = mouseX - height / 2;
-  let locY = mouseY - width / 2;
+  //let locX = mouseX - height / 2;
+  //let locY = mouseY - width / 2;
 
   pop();
   ambientLight(60, 60, 60);
