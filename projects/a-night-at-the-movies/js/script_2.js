@@ -1,12 +1,9 @@
 let shirtPlaid, shirtWhite;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
-let balloonSunny;
-let balloonPJ;
 
 function preload() {
    backgroundImg = loadImage('assets/images/background.png');
-   balloonSunny = loadModel('assets/3D/balloons.obj', true, success);
 }
 
 function setup() {
@@ -44,8 +41,7 @@ function draw() {
        shirtWhite.changeAnimation('normal')
   };
 
-    //drawSprites();
-    model(balloonSunny);
+    drawSprites();
 }
 
  // Sketch A:

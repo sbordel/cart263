@@ -24,16 +24,16 @@ function setup() {
 }
 
 function draw() {
-  //clear();
-  background(255, 0);
+  background(0);
 
   let locX = mouseX - height / 2;
   let locY = mouseY - width / 2;
 
-  pop();
+
   ambientLight(60, 60, 60);
   pointLight(255, 255, 255);
 
+  push();
   noStroke();
   scale(3);
   ambientMaterial(255);
@@ -42,5 +42,6 @@ function draw() {
   //rotateX(frameCount * 0.01);
   //rotateY(frameCount * 0.01);
   model(balloonSunny);
-  push();
+  pop();
+
 }

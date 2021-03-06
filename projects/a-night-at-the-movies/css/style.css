@@ -20,8 +20,24 @@ body {
 */
 
 html, body {
+  background-image: url('../assets/images/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover, 40%;
   margin: 0;
   height: 100%;
 }
 
+/*
+#twoDobj{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 
+#threeDobj{
+  z-index: 9;
+}
+*/
