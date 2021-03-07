@@ -16,11 +16,13 @@ Sunny and Jimmy-Pierre is a reinterpretation of David Lynch's notoriously infamo
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 let balloonSunny;
-let shirtWhite;
+let balloonPJ;
+//let shirtWhite;
 
 function preload() {
-  balloonSunny = loadModel('assets/3D/balloons.obj', true);
-  shirtWhite = loadImage('assets/sprites/wshirt1.png');
+  balloonSunny = loadModel('assets/3D/balloonone.obj', true);
+  balloonPJ = loadModel('assets/3D/balloontwo.obj', true);
+  //shirtWhite = createImg('assets/images/whiteshirt_normal.gif');
 }
 
 function setup() {
@@ -30,27 +32,48 @@ function setup() {
 function draw() {
   background(255, 0);
 
+  //shirtWhite.position(25, 20);
   drawBalloon();
-  drawShirts();
+  //drawShirts();
 }
 
 function drawBalloon() {
-  pop();
-  ambientLight(60, 60, 60);
-  pointLight(255, 255, 255);
+  clear();
+  background(255, 0);
 
-  noStroke();
-  scale(3);
+  ambientLight(60, 60, 60);
+  pointLight(204, 255, 255);
+
   ambientMaterial(255);
+  noStroke();
+  translate(-300, -15);
+  push();
+  scale(2);
   rotateZ(PI);
-  rotateY(PI);
+  rotateY(9);
+  rotateX(-0.2);
   //rotateX(frameCount * 0.01);
   //rotateY(frameCount * 0.01);
+  //modelMode(CENTER);
   model(balloonSunny);
+  pop();
+
+
+  translate(500, -15);
   push();
+  scale(2.3);
+  rotateZ(3.32);
+  rotateY(9.3);
+  rotateX(-0.1);
+  //rotateX(frameCount * 0.01);
+  //rotateY(frameCount * 0.01);
+  //modelMode(CENTER);
+  model(balloonPJ);
+  //balloonPJ.position(100, -200);
+  pop();
 }
 
-
+/*
 function drawShirts() {
   push();
   rotateZ(PI);
@@ -59,4 +82,4 @@ function drawShirts() {
   noStroke();
   plane(200, 200);
   pop();
-}
+}*/
