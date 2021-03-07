@@ -8,77 +8,68 @@
 Sunny and Jimmy-Pierre
 sam bordeleau
 
-Sunny and Jimmy-Pierre is a reinterpretation of David Lynch's notoriously infamous 
-(and oh so sadly unpopular) short movie titled "Pierre and Sonny Jim" taking form as a web-based game.
+"Sunny and Jimmy-Pierre" is a reinterpretation of David Lynch's infamous 
+(and so sadly unpopular) short movie titled "Pierre and Sonny Jim" taking form as a web-based game.
 ****************/
 
-//let shirtPlaid, shirtWhite;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 let balloonSunny;
-let balloonPJ;
+let balloonJP;
 let backgroundImg;
-//let shirtWhite;
+let shirtWhite;
+let shirtPlaid;
 
 function preload() {
   shirtWhite = createImg('assets/images/whiteshirt_normal.gif');
+  shirtWhite.id('shirtOne');
+  shirtWhite.style('opacity','0');
+
   shirtPlaid = createImg('assets/images/plaidshirt_normal.gif');
+  shirtPlaid.id('shirtTwo');
+  shirtPlaid.style('opacity','0');
+
   balloonSunny = loadModel('assets/3D/balloonone.obj', true);
-  balloonPJ = loadModel('assets/3D/balloontwo.obj', true);
+  balloonJP = loadModel('assets/3D/balloontwo.obj', true);
+  //bgSound = loadSound('assets/sound/ambience_sound.mp3');
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-
-  shirtWhite.id('shirtOne');
-  shirtPlaid.id('shirtTwo');
+  //bgSound.loop();
 }
 
 function draw() {
   drawBalloon();
+  shirtWhite.style('opacity','1');
+  shirtPlaid.style('opacity','1');
 }
 
 function drawBalloon() {
   background(255, 0);
-
+  
   ambientLight(60, 60, 60);
-  directionalLight(255, 254, 235, -0.3, 1, -0.8);
-
-  specularMaterial(255, 235);
+  directionalLight(255, 250, 235, -0.3, 1, -0.8);
+  specularMaterial(255, 245);
   shininess(30);
   noStroke();
-  translate(-295, -40, 10);
+
   push();
   scale(2);
+  translate(-160, -20, 0)
   rotateZ(PI);
   rotateY(9);
-  rotateX(-0.2);
-  //rotateX(frameCount * 0.01);
-  //rotateY(frameCount * 0.01);
+  rotateX(-0.35);
   model(balloonSunny);
   pop();
 
-
-  translate(510, -50, 10);
   push();
   scale(2.3);
-  rotateZ(3.32);
-  rotateY(9.45);
-  rotateX(-0.1);
-  //rotateX(frameCount * 0.01);
-  //rotateY(frameCount * 0.01);
-  model(balloonPJ);
+  translate(105, -35, 0)
+  rotateZ(3.22);
+  rotateY(9.60);
+  rotateX(-0.2);
+  model(balloonJP);
   pop();
 }
 
-
-/*
-function drawShirts() {
-  push();
-  rotateZ(PI);
-  rotateY(PI);
-  texture(shirtWhite, windowHalfX, windowHalfY);
-  noStroke();
-  plane(200, 200);
-  pop();
-}*/
