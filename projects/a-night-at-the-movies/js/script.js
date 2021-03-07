@@ -14,13 +14,18 @@ sam bordeleau
 
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
+
 let balloonSunny;
 let balloonJP;
+
 let backgroundImg;
+
 let shirtWhite;
 let shirtPlaid;
 
 function preload() {
+
+  // wiggling dress shirt gifs
   shirtWhite = createImg('assets/images/whiteshirt_normal.gif');
   shirtWhite.id('shirtOne');
   shirtWhite.style('opacity','0');
@@ -29,23 +34,31 @@ function preload() {
   shirtPlaid.id('shirtTwo');
   shirtPlaid.style('opacity','0');
 
+  // 3D balloon head models
   balloonSunny = loadModel('assets/3D/balloonone.obj', true);
   balloonJP = loadModel('assets/3D/balloontwo.obj', true);
-  //bgSound = loadSound('assets/sound/ambience_sound.mp3');
+
+  // background music and screaming sound FX
+  soundFormats('mp3', 'ogg');
+  bgSound = loadSound('assets/sound/ambience_sound');
+  sunnyFX = loadSound('assets/sound/screamingsunny');
+  //jpFX = loadSound('assets/sound/screamingjp');
+
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-  //bgSound.loop();
+  bgSound.loop();
 }
 
 function draw() {
-  drawBalloon();
+  drawBalloons();
+
   shirtWhite.style('opacity','1');
   shirtPlaid.style('opacity','1');
 }
 
-function drawBalloon() {
+function drawBalloons() {
   background(255, 0);
   
   ambientLight(60, 60, 60);
@@ -54,6 +67,7 @@ function drawBalloon() {
   shininess(30);
   noStroke();
 
+  // Sunny balloon
   push();
   scale(2);
   translate(-160, -20, 0)
@@ -63,6 +77,7 @@ function drawBalloon() {
   model(balloonSunny);
   pop();
 
+  // Jimmy-Pierre balloon 
   push();
   scale(2.3);
   translate(105, -35, 0)
@@ -72,4 +87,10 @@ function drawBalloon() {
   model(balloonJP);
   pop();
 }
+
+
+/*
+function shirtPlaidEvent(){
+  
+}*/
 
