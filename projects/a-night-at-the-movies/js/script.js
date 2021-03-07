@@ -20,21 +20,23 @@ let balloonPJ;
 //let shirtWhite;
 
 function preload() {
+  shirtWhite = createImg('assets/images/whiteshirt_normal.gif');
+  shirtPlaid = createImg('assets/images/plaidshirt_normal.gif');
   balloonSunny = loadModel('assets/3D/balloonone.obj', true);
   balloonPJ = loadModel('assets/3D/balloontwo.obj', true);
-  //shirtWhite = createImg('assets/images/whiteshirt_normal.gif');
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
+
+  shirtWhite.id('shirtOne');
+  shirtPlaid.id('shirtTwo');
 }
 
 function draw() {
   background(255, 0);
 
-  //shirtWhite.position(25, 20);
   drawBalloon();
-  //drawShirts();
 }
 
 function drawBalloon() {
@@ -42,9 +44,10 @@ function drawBalloon() {
   background(255, 0);
 
   ambientLight(60, 60, 60);
-  pointLight(204, 255, 255);
+  directionalLight(255, 254, 235, -0.3, 1, -0.8);
 
-  ambientMaterial(255);
+  specularMaterial(255, 235);
+  shininess(30);
   noStroke();
   translate(-300, -15);
   push();
@@ -54,22 +57,19 @@ function drawBalloon() {
   rotateX(-0.2);
   //rotateX(frameCount * 0.01);
   //rotateY(frameCount * 0.01);
-  //modelMode(CENTER);
   model(balloonSunny);
   pop();
 
 
-  translate(500, -15);
+  translate(510, -30);
   push();
   scale(2.3);
   rotateZ(3.32);
-  rotateY(9.3);
+  rotateY(9.45);
   rotateX(-0.1);
   //rotateX(frameCount * 0.01);
   //rotateY(frameCount * 0.01);
-  //modelMode(CENTER);
   model(balloonPJ);
-  //balloonPJ.position(100, -200);
   pop();
 }
 

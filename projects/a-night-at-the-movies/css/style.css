@@ -29,16 +29,17 @@ html, body {
   z-index: 9999;
 }
 
-/*
-#twoDobj{
+#shirtOne {
   position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
+  left: 685px;
+  top: 400px;
   z-index: 0;
 }
 
-#threeDobj{
-  z-index: 9;
+#shirtTwo{
+  position: absolute;
+  left: 185px;
+  top: 400px;
+  z-index: 0;
 }
-*/
+
