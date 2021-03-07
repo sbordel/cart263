@@ -12,11 +12,15 @@ Sunny and Jimmy-Pierre is a reinterpretation of David Lynch's notoriously infamo
 (and oh so sadly unpopular) short movie titled "Pierre and Sonny Jim" taking form as a web-based game.
 ****************/
 
+//let shirtPlaid, shirtWhite;
+let windowHalfX = window.innerWidth / 2;
+let windowHalfY = window.innerHeight / 2;
 let balloonSunny;
+let shirtWhite;
 
 function preload() {
   balloonSunny = loadModel('assets/3D/balloons.obj', true);
-  //balloonMtl = loadImage('assets/3D/balloons.mtl');
+  shirtWhite = loadImage('assets/sprites/wshirt1.png');
 }
 
 function setup() {
@@ -26,9 +30,11 @@ function setup() {
 function draw() {
   background(255, 0);
 
-  //let locX = mouseX - height / 2;
-  //let locY = mouseY - width / 2;
+  drawBalloon();
+  drawShirts();
+}
 
+function drawBalloon() {
   pop();
   ambientLight(60, 60, 60);
   pointLight(255, 255, 255);
@@ -42,4 +48,15 @@ function draw() {
   //rotateY(frameCount * 0.01);
   model(balloonSunny);
   push();
+}
+
+
+function drawShirts() {
+  push();
+  rotateZ(PI);
+  rotateY(PI);
+  texture(shirtWhite, windowHalfX, windowHalfY);
+  noStroke();
+  plane(200, 200);
+  pop();
 }

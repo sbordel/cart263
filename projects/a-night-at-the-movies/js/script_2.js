@@ -17,7 +17,7 @@ function setup() {
     shirtPlaid.addAnimation('normal' , 'assets/sprites/wshirt1.png' , 'assets/sprites/wshirt4.png');
     shirtPlaid.addAnimation('angry' , 'assets/sprites/wshirt1.png' , 'assets/sprites/wshirt2.png');
 
-    shirtPlaid.mouseActive, shirtPlaid.mouseActive = true;*/
+    shirtPlaid.mouseActive, shirtPlaid.mouseActive = true;
 } 
 
 function draw() {

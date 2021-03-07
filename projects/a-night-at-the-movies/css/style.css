@@ -26,6 +26,7 @@ html, body {
   background-size: cover, 40%;
   margin: 0;
   height: 100%;
+  z-index: 9999;
 }
 
 /*
