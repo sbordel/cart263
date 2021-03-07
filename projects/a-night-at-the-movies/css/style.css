@@ -18,28 +18,36 @@ body {
   overflow: hidden; //Hide anything that goes off the window size
 }
 */
-
-html, body {
+html {
   background-image: url('../assets/images/background.png');
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-size: cover, 40%;
+  overflow: hidden; 
+}
+
+html, body {
+  /*
+  background-image: url('../assets/images/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover, 40%;*/
   margin: 0;
   height: 100%;
-  z-index: 9999;
+  overflow: hidden;
 }
 
 #shirtOne {
   position: absolute;
   left: 685px;
   top: 400px;
-  z-index: 0;
+  z-index: -1;
 }
 
 #shirtTwo{
   position: absolute;
   left: 185px;
   top: 400px;
-  z-index: 0;
+  z-index: -1;
 }
 

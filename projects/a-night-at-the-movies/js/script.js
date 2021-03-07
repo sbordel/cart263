@@ -17,6 +17,7 @@ let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 let balloonSunny;
 let balloonPJ;
+let backgroundImg;
 //let shirtWhite;
 
 function preload() {
@@ -34,13 +35,10 @@ function setup() {
 }
 
 function draw() {
-  background(255, 0);
-
   drawBalloon();
 }
 
 function drawBalloon() {
-  clear();
   background(255, 0);
 
   ambientLight(60, 60, 60);
@@ -49,7 +47,7 @@ function drawBalloon() {
   specularMaterial(255, 235);
   shininess(30);
   noStroke();
-  translate(-300, -15);
+  translate(-295, -40, 10);
   push();
   scale(2);
   rotateZ(PI);
@@ -61,7 +59,7 @@ function drawBalloon() {
   pop();
 
 
-  translate(510, -30);
+  translate(510, -50, 10);
   push();
   scale(2.3);
   rotateZ(3.32);
@@ -72,6 +70,7 @@ function drawBalloon() {
   model(balloonPJ);
   pop();
 }
+
 
 /*
 function drawShirts() {
