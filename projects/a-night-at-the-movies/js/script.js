@@ -8,8 +8,6 @@
 Sunny and Jimmy-Pierre
 sam bordeleau
 
-"Sunny and Jimmy-Pierre" is a reinterpretation of David Lynch's infamous 
-(and so sadly unpopular) short movie titled "Pierre and Sonny Jim" taking form as a web-based game.
 ****************/
 
 // variables
@@ -47,6 +45,15 @@ function preload() {
   shirtPlaid.id('shirtTwo');
   shirtPlaid.style('opacity', '0');
 
+  // jiggly mouth gifs
+  mouthSunny = createImg('assets/images/mouth01.gif');
+  mouthSunny.id('mouthOne');
+  mouthSunny.style('opacity', '0');
+
+  mouthPJ = createImg('assets/images/mouth01.gif');
+  mouthPJ.id('mouthTwo');
+  mouthPJ.style('opacity', '0');
+
   // 3D balloon head models
   balloonSunny = loadModel('assets/3D/balloonone.obj', true);
   balloonJP = loadModel('assets/3D/balloontwo.obj', true);
@@ -55,7 +62,7 @@ function preload() {
   soundFormats('mp3', 'ogg');
   bgSound = loadSound('assets/sound/ambience_sound');
   sunnyFX = loadSound('assets/sound/scream04');
-  jpFX = loadSound('assets/sound/screamingjp');
+  jpFX = loadSound('assets/sound/scream05');
 
   // load html elements
   boundaryOne = select('#rectOne');
@@ -66,6 +73,7 @@ function preload() {
   boundaryTwo.mousePressed(jpMousePressed);
   boundaryOne.mouseReleased(sonnyMouseReleased);
   boundaryTwo.mouseReleased(jpMouseReleased);
+  
 }
 
 // ****************** 
@@ -79,6 +87,8 @@ function draw() {
   shirtWhite.style('opacity', '1');
   shirtPlaid.style('opacity', '1');
 
+  mouthSunny.style('opacity', '1');
+  mouthPJ.style('opacity', '1');
   drawBalloon();
 }
 
@@ -95,8 +105,8 @@ function drawBalloon() {
 // ** Sunny balloon **
 // random values for rotation on Z or Y axis 
   if (sMove) {
-    var ranZ = random(-5, 5);
-    var ranY = random(-5, 5);
+    var ranZ = random(-0.5, 1);
+    var ranY = random(-0.5, 0.25);
     var ranB = Math.random() < 0.5
 
     if (ranB) {
@@ -119,12 +129,11 @@ function drawBalloon() {
   model(balloonSunny);
   pop();
 
-
   // ** J-P balloon **
   // random values for rotation on Z or Y axis 
   if (jpMove) {
-    ranZ = random(-5, 5);
-    ranY = random(-5, 5);
+    ranZ = random(-0.25, 0.75);
+    ranY = random(-0.3, 0.25);
     ranB = Math.random() < 0.5
 
     if (ranB) {
@@ -167,4 +176,3 @@ function jpMouseReleased() {
   jpMove = false;
   jpFX.pause();
 }
-
