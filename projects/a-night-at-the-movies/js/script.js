@@ -45,15 +45,6 @@ function preload() {
   shirtPlaid.id('shirtTwo');
   shirtPlaid.style('opacity', '0');
 
-  // jiggly mouth gifs
-  mouthSunny = createImg('assets/images/mouth01.gif');
-  mouthSunny.id('mouthOne');
-  mouthSunny.style('opacity', '0');
-
-  mouthPJ = createImg('assets/images/mouth01.gif');
-  mouthPJ.id('mouthTwo');
-  mouthPJ.style('opacity', '0');
-
   // 3D balloon head models
   balloonSunny = loadModel('assets/3D/balloonone.obj', true);
   balloonJP = loadModel('assets/3D/balloontwo.obj', true);
@@ -73,7 +64,6 @@ function preload() {
   boundaryTwo.mousePressed(jpMousePressed);
   boundaryOne.mouseReleased(sonnyMouseReleased);
   boundaryTwo.mouseReleased(jpMouseReleased);
-  
 }
 
 // ****************** 
@@ -86,9 +76,6 @@ function setup() {
 function draw() {
   shirtWhite.style('opacity', '1');
   shirtPlaid.style('opacity', '1');
-
-  mouthSunny.style('opacity', '1');
-  mouthPJ.style('opacity', '1');
   drawBalloon();
 }
 

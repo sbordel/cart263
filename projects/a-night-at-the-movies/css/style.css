@@ -39,25 +39,6 @@ html, body {
   z-index: -1;
 }
 
-#mouthOne{
-  position: fixed;
-  margin-left: 310px;
-  margin-top: 350px;
-  width: 150px;
-  height: 150px;
-  z-index: 1;
-}
-
-#mouthTwo{
-  position: fixed;
-  right:0;
-  margin-right: 335px;
-  margin-top: 300px;
-  width: 200px;
-  height: 200px;
-  z-index: 1;
-}
-
 /*  */
 #rectOne{
   position: fixed;
