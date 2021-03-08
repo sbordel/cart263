@@ -28,7 +28,7 @@ html, body {
 #shirtOne {
   position: fixed;
   left: 620px;
-  top: 370px;
+  top: 350px;
   width: 500px;
   z-index: -1;
 }
@@ -36,7 +36,7 @@ html, body {
 /*plaid shirt*/
 #shirtTwo{
   position: fixed;
-  left: 120px;
+  left: 145px;
   top: 370px;
   width: 450px;
   z-index: -1;
@@ -47,7 +47,7 @@ html, body {
 #mouthOne{
     position: fixed;
     width: 150px;
-    left: 265px;
+    left: 275px;
     top: 310px;
     z-index: 1;
 }
