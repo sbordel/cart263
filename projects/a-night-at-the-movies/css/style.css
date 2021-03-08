@@ -25,7 +25,7 @@ html, body {
 /* shirt elements */
 #shirtOne {
   position: fixed;
-  left: 705px;
+  left: 805px;
   top: 420px;
   width: 500px;
   z-index: -1;
@@ -33,7 +33,7 @@ html, body {
 
 #shirtTwo{
   position: fixed;
-  left: 180px;
+  left: 280px;
   top: 430px;
   width: 450px;
   z-index: -1;
