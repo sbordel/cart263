@@ -16,7 +16,7 @@ let balloonSunnyX = -150;
 let balloonSunnyY = -15;
 
 let balloonJP;
-let balloonJPX = 110;
+let balloonJPX = 100;
 let balloonJPY = -30;
 
 let shirtWhite;
@@ -133,7 +133,7 @@ function drawBalloon() {
 
 // JP's position
   push();
-  scale(2);
+  scale(2.2);
   translate(balloonJPX, balloonJPY, 0);
   rotateZ(3.22 + jZ);
   rotateY(9.60 + jY);
