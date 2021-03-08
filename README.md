@@ -12,3 +12,4 @@
 [E2: is this toxic or edible? (incomplete)](https://sbordel.github.io/cart263/exercises/slamina-new-game-plus/index.html)
 
 ###projects
+[P1: Sonny & Pierre-Jimmy](https://sbordel.github.io/cart263/projects/a-night-at-the-movies/index.html)
