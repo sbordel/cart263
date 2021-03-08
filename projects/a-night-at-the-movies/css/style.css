@@ -23,7 +23,8 @@ html, body {
   transform: translate(-50%, -50%);
 }
 
-/* shirt elements */
+/* SHIRT GIFS */
+/*white shirt*/
 #shirtOne {
   position: fixed;
   left: 620px;
@@ -32,6 +33,7 @@ html, body {
   z-index: -1;
 }
 
+/*plaid shirt*/
 #shirtTwo{
   position: fixed;
   left: 120px;
@@ -40,7 +42,8 @@ html, body {
   z-index: -1;
 }
 
-/* mouth gifs  */
+/* MOUTH GIFS  */
+/* mouth on left*/
 #mouthOne{
     position: fixed;
     width: 150px;
@@ -49,6 +52,7 @@ html, body {
     z-index: 1;
 }
 
+/* mouth on right*/
 #mouthTwo{
   position: fixed;
   width: 220px;
