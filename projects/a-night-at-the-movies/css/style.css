@@ -33,7 +33,7 @@ html, body {
 
 #shirtTwo{
   position: fixed;
-  left: 105px;
+  left: 95px;
   top: 370px;
   width: 450px;
   z-index: -1;
