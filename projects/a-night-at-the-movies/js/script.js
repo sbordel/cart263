@@ -12,11 +12,11 @@ sam bordeleau
 
 // variables
 let balloonSunny;
-let balloonSunnyX = -170;
+let balloonSunnyX = -150;
 let balloonSunnyY = -15;
 
 let balloonJP;
-let balloonJPX = 105;
+let balloonJPX = 110;
 let balloonJPY = -30;
 
 let shirtWhite;
