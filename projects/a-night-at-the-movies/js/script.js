@@ -12,7 +12,7 @@ sam bordeleau
 
 // variables
 let balloonSunny;
-let balloonSunnyX = -160;
+let balloonSunnyX = -170;
 let balloonSunnyY = -15;
 
 let balloonJP;
@@ -133,7 +133,7 @@ function drawBalloon() {
 
 // JP's position
   push();
-  scale(1.8);
+  scale(2);
   translate(balloonJPX, balloonJPY, 0);
   rotateZ(3.22 + jZ);
   rotateY(9.60 + jY);
