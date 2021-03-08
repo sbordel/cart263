@@ -34,7 +34,7 @@ html, body {
 
 #shirtTwo{
   position: fixed;
-  left: 95px;
+  left: 120px;
   top: 370px;
   width: 450px;
   z-index: -1;
@@ -44,7 +44,7 @@ html, body {
 #mouthOne{
     position: fixed;
     width: 150px;
-    left: 250px;
+    left: 265px;
     top: 310px;
     z-index: 1;
 }
