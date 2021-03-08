@@ -146,7 +146,7 @@ function drawBalloon() {
 
 // JP's position
   push();
-  scale(2);
+  scale(1.8);
   translate(balloonJPX, balloonJPY, 0);
   rotateZ(3.22 + jZ);
   rotateY(9.60 + jY);
