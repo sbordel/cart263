@@ -33,6 +33,9 @@ let jZ = 0;
 let jpMove = false;
 let sMove = false;
 
+let mouthSonny;
+let mouthJP;
+
 // ****************** 
 function preload() {
 
@@ -44,6 +47,12 @@ function preload() {
   shirtPlaid = createImg('assets/images/plaidshirt_normal.gif');
   shirtPlaid.id('shirtTwo');
   shirtPlaid.style('opacity', '0');
+
+  mouthSonny = select('#mouthOne');
+  mouthSonny.style('opacity', '0');
+
+  mouthJP = select('#mouthTwo');
+  mouthJP.style('opacity', '0');
 
   // 3D balloon head models
   balloonSunny = loadModel('assets/3D/balloonone.obj', true);
@@ -76,6 +85,8 @@ function setup() {
 function draw() {
   shirtWhite.style('opacity', '1');
   shirtPlaid.style('opacity', '1');
+  mouthSonny.style('opacity', '1');
+  mouthJP.style('opacity', '1');
   drawBalloon();
 }
 
