@@ -119,7 +119,7 @@ function drawBalloon() {
 
 // Sunny's position
   push();
-  scale(2);
+  scale(1.8);
   translate(balloonSunnyX, balloonSunnyY, 0);
   rotateZ(PI + sZ);
   rotateY(9 + sY);
@@ -146,7 +146,7 @@ function drawBalloon() {
 
 // JP's position
   push();
-  scale(2.3);
+  scale(2);
   translate(balloonJPX, balloonJPY, 0);
   rotateZ(3.22 + jZ);
   rotateY(9.60 + jY);
