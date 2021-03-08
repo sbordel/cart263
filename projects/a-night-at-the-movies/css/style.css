@@ -3,6 +3,8 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-size: cover, 40%;
+  width: 1280px;
+  height: 800px;
   justify-content: center;
   align-content: center;
 }
@@ -10,7 +12,6 @@ html {
 html, body {
   padding: 0;
   margin: 0;
-  height: 100%;
   overflow: hidden;
 }
 

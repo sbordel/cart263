@@ -77,7 +77,7 @@ function preload() {
 
 // ****************** 
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(1280, 800, WEBGL);
   bgSound.loop();
 }
 
