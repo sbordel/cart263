@@ -17,24 +17,6 @@
     ]
    };
 
-   /*
-   let haikuLines = {
-    fiveSyllables: [
-      `O, to be a tree`,
-      `The cat does not know`,
-      `We are all forests`,
-      `You have done your best`,
-      `They are all gone now`
-    ],
-    sevenSyllables: [
-      `Say the things left unsaid`,
-      `Never believe the wind's lies`,
-      `The autumn stretches its legs`,
-      `Nothing can satisfy you`,
-      `They will not come back again`
-    ]
-  };*/
-
 let line1 = document.getElementById(`line-1`);
 let line2 = document.getElementById(`line-2`);
 let line3 = document.getElementById(`line-3`);
@@ -56,6 +38,39 @@ function setupLines() {
 
   function changeLine(event) {
     fadeOut(event.target, 1);
+  }
+
+  function fadeOut(element, opacity) {
+    // change opacity of the line
+    opacity -= 0.01;
+    element.style[`opacity`] = opacity;
+    // check if opacity is greater than 0
+    if (opacity > 0) {
+      requestAnimationFrame(function() {
+        fadeOut(element, opacity);
+      });
+    }
+    else {
+      setNewLine(element);
+      // trigger fade in
+      fadeIn(element, 0);
+    }
+  }
+  
+  function fadeIn(element, opacity) {
+    // increase the opacity
+    opacity += 0.01;
+    element.style[`opacity`] = opacity;
+    // check if opacity is still less than 1
+    if (opacity < 1) {
+      // keep fading
+      requestAnimationFrame(function() {
+        fadeIn(element, opacity);
+      });
+    }
+    else {
+    //na
+    }
   }
 
   function setNewLine(element) {
