@@ -2,9 +2,10 @@
 **********************************************/
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Helvetica, sans-serif;
   font-size: 2rem;
   font-weight: bold;
+  color: rgba(212, 212, 55, 0.767);
   width: 50vw;
   margin: 5%;
   padding-top: 2rem;
