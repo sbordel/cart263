@@ -1,32 +1,31 @@
 "use strict";
 
-/**
-Title of Project
-Author Name
+let fiveSyllableLines = [
+`would be so fuzzy`,
+`strolling in the sand`,
+`earthworm based diet`,
+`a synthetic feel`,
+`xanthophores sheen`
+] ;
 
-This is a template. You must fill in the title,
-author, and this description to match your project!
-*/
+let sevenSyllableLines = [
+`the cutest of axolotls`,
+`with lidless googly black eyes`,
+`a silly walking fishy`,
+`its small vestigial teeth`,
+`head crowned with external gills`
+] ;
 
-/**
-Description of preload
-*/
 function preload() {
 
 }
 
 
-/**
-Description of setup
-*/
 function setup() {
 
 }
 
 
-/**
-Description of draw()
-*/
 function draw() {
 
 }
