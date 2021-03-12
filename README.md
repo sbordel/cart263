@@ -11,7 +11,7 @@
 
 [E2: is this toxic or edible? (incomplete)](https://sbordel.github.io/cart263/exercises/slamina-new-game-plus/index.html)
 
-[(...)]
+(...)
 
 [E5: haiku: best gill](https://sbordel.github.io/cart263/exercises/haiku-best-gill/index.html)
 
