@@ -1,5 +1,6 @@
 "use strict";
 
+// haikus 
   let haikuLines = {
     fiveSyllables: [
     `would be so fuzzy`,
@@ -31,6 +32,7 @@ function setupLines() {
     line3.innerText = random(haikuLines.fiveSyllables);
   }
 
+  //added voiceOver event that then triggers the fadeOut event
   function addListeners() {
     line1.addEventListener(`click`, voiceOver);
     line2.addEventListener(`click`, voiceOver);
@@ -88,4 +90,9 @@ function setupLines() {
   
   function random(array) {
     return array[Math.floor(Math.random() * array.length)];
+  }
+
+  // added Email attribute change on button click 
+  function emailContent() {
+    document.getElementsByTagName("A")[0].setAttribute("href", "mailto:uremail@here.com?Subject=Axolotl%20mail" + "&body=" + line1.innerText + "%20%3A%20" + line2.innerText + "%20%3A%20" + line3.innerText); 
   }
