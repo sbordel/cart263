@@ -1,14 +1,42 @@
 /*********************************************
 **********************************************/
 
+@font-face {
+  font-family: 'Karrik-Regular' ;
+  src: url('../assets/fonts/karrik/fonts/WOFF/Karrik-Regular.woff') format('woff');
+}
+
+html{
+  /*background-image: url('../assets/images/bg1.png');*/
+  background-image: url('../assets/images/axolotl1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 body {
-  font-family: Helvetica, sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgba(212, 212, 55, 0.767);
-  width: 50vw;
-  margin: 5%;
-  padding-top: 2rem;
+  font-family: 'Times New Roman';
+  font-size: 1.8rem;
+  /*font-weight: ;*/
+  color: #000000;
   user-select: none;
   background-color: #0000ff;
+}
+
+.modal {
+  position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  margin: auto;
+  padding-top: 5%;
+  z-index: 1;
+  height: 20vw;
+  width: 35vw;
+  text-align: center;
+  border: 4px inset #a0a0a0;
+  /*background-color: #5d44e7;*/
+  background-image: url('../assets/images/axolotl2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

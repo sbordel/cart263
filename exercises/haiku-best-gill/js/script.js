@@ -11,7 +11,7 @@
     sevenSyllables: [
     `the cutest of axolotls`,
     `with lidless googly black eyes`,
-    `a silly walking fishy`,
+    `silly walking pet fishy`,
     `its small vestigial teeth`,
     `head crowned with external gills`
     ]
@@ -23,6 +23,7 @@ let line3 = document.getElementById(`line-3`);
 
 setupLines();
 addListeners();
+voiceOver();
 
 function setupLines() {
     line1.innerText = random(haikuLines.fiveSyllables);
@@ -31,14 +32,15 @@ function setupLines() {
   }
 
   function addListeners() {
-    line1.addEventListener(`click`, changeLine);
-    line2.addEventListener(`click`, changeLine);
-    line3.addEventListener(`click`, changeLine);
+    line1.addEventListener(`click`, voiceOver);
+    line2.addEventListener(`click`, voiceOver);
+    line3.addEventListener(`click`, voiceOver);
   }
 
-  function changeLine(event) {
-    fadeOut(event.target, 1);
-  }
+  function voiceOver(event) {
+    responsiveVoice.speak(event.target.textContent, "UK English Female", {rate: 0.5});
+    fadeOut(event.target, 2);
+}
 
   function fadeOut(element, opacity) {
     // change opacity of the line
