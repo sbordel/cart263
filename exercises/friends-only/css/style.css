@@ -9,6 +9,11 @@ Raving Redactionist CSS
 }
 
 @font-face {
+  font-family: 'Aquarius';
+  src: url(WEB/polyducks_12x12.woff);
+}
+
+@font-face {
   font-family: 'MisterPixelTools';
   src: url(WEB/MisterPixelTools.otf);
 }
@@ -105,6 +110,18 @@ h2 {
   background-color: transparent; 
 }
  
+/* img-description elements */
+.img-description:hover{
+  font-family: 'Aquarius';
+  font-size: 12px;
+  font-style: italic;
+}
+.img-description:active{
+  font-family: 'Aquarius';
+  font-size: 12px;
+  text-decoration:line-through;
+}
+
 /* --- WEB --- */
 /* removes right column when window is 600px wide or smaller */
 @media only screen and (max-width: 600px) {
