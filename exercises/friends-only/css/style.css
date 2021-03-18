@@ -1,0 +1,25 @@
+/*********************************************
+Raving Redactionist CSS
+**********************************************/
+
+/* general styling */
+body {
+    font-family: Courier, monospace;
+    width: 800px;
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  
+  /* redacted elements */
+  .redacted {
+    background-color: black; 
+    user-select: none; 
+  }
+  
+  /* reveled elements */
+  .revealed {
+    background-color: transparent; 
+    text-decoration: underline; 
+    color: red; 
+  }
+  
