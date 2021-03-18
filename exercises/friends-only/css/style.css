@@ -2,24 +2,50 @@
 Raving Redactionist CSS
 **********************************************/
 
-/* general styling */
+/* added font to collection */
+@font-face {
+  font-family: 'CP437';
+  src: url(WEB/cp437-thin_8x16.woff);
+}
+
+@font-face {
+  font-family: 'MisterPixelTools';
+  src: url(WEB/MisterPixelTools.otf);
+}
+
+/* setting image as background */
+html{
+  background-image: url('../assets/images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 body {
-    font-family: Courier, monospace;
+    font-family: 'CP437';
     width: 800px;
     margin-left: 100px;
     margin-top: 100px;
+  }
+
+  #sd-1 {
+    font-family: 'CP437';
+    font-size: 1.5vh;
+    color: #42a0f8; 
   }
   
   /* redacted elements */
   .redacted {
     background-color: black; 
+    color: black;
     user-select: none; 
   }
   
   /* reveled elements */
   .revealed {
+    font-family: 'MisterPixelTools';
     background-color: transparent; 
     text-decoration: underline; 
-    color: red; 
+    color: #0000EE; 
   }
   
+  /*:visited { color: #551A8B; }*/
