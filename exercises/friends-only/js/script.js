@@ -1,6 +1,10 @@
 /**
 Raving Redactionist CSS
 */
+let $place = $('#place');
+let $toe = $('#toe');
+let $bunny = $('#bunny');
+let $frog = $('#frog');
 
 "use strict";
 
@@ -23,4 +27,28 @@ function attemptReveal() {
     $(this).addClass('revealed');
   }
 }
+
+/* calling function to display image */
+$('.img-description').click(function() {
+    $('#corresponding-img').css('display', 'block');
+});
+
+/* display corresponding image on click event */
+$('#place').click(function() {
+     $('#corresponding-img').attr('src', 'assets/images/sewer1.png');
+});
+$('#toe').click(function() {
+       $('#corresponding-img').attr('src', 'assets/images/toe1.png');
+});
+$('#bunny').click(function() {
+    $('#corresponding-img').attr('src', 'assets/images/bunny1.png');
+});
+$('#frog').click(function() {
+       $('#corresponding-img').attr('src', 'assets/images/frog1.png');
+});
+
+
+
+
+
 
