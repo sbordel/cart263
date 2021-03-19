@@ -15,7 +15,7 @@
 
 [E5: haiku: best gill](https://sbordel.github.io/cart263/exercises/haiku-best-gill/index.html)
 
-[E6: haiku: best gill](https://sbordel.github.io/cart263/exercises/friends-only/index.html)
+[E6: friends only](https://sbordel.github.io/cart263/exercises/friends-only/index.html)
 
 ###projects
 
