@@ -13,7 +13,7 @@
 
 [E7: friends only](https://sbordel.github.io/cart263/exercises/friends-only/index.html)
 
-[E8: fruit salad]
+[E8: fruit salad](https://sbordel.github.io/cart263/exercises/fruit-salad/index.html)
 
 ###projects
 
