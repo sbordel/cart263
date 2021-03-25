@@ -1,84 +1,104 @@
-/*********************************************
 
-**********************************************/
-@font-face {
-  font-family: 'Pianika';
-  src: url(../assets/fonts/pianika.ttf);
-}
-
-/* setting image as background */
 html{
   overflow: hidden;
 }
-
-h2 {
-  font-family: 'Pianika';
+/* intro pop-up */
+#note{
+  display: block;
+  position: relative;
+  background-image: url(../assets/images/notes.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10%;
+  width: 300px;
+  height: 490px;
   text-align: center;
-  width: 30%;
-  font-size: 2.5rem;
+  z-index: 4;
+ }
+h2 {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35%;
+  font-family: 'Times New';
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 1.9rem; 
+  text-align: center;
+  z-index: 4;
 }
-
+.close{
+  display: grid;
+  position: relative;
+  justify-content: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  top: 0;
+  right: 0;
+}
+.close:hover{
+  cursor: pointer;
+}
+/* success modal */
+#solved-dialog{
+  position: relative;
+  font-family: 'Times New';
+  font-weight: lighter;
+  z-index: 4;
+ }
+/* section where the fruits and vegetables are */
 #fruit-area {
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
   top: 0;
   left: 0;
   right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
   width: 100%;
-  height: 60%;
-  margin-top: 10%;
   }
-
-.food {
-  z-index: 2;
-}
-
-.food:hover {
-  filter:drop-shadow(5px 5px 5px black);
-}
-
+/* fruit & vegetable positioning */
 .fruit img {
-  width: 90px;
+  width: 80px;
   }
-
-.found img {
-  width: 90px;
-  }
-
 .veggie img {
-  width: 130px;
+  width: 110px;
   }
-
 .veg img{
   width: 60px;
 }
-
 .veg2 img{
   width: 80px;
 }
-
+.food {
+  z-index: 2;
+}
+.food:hover {
+  filter: drop-shadow(5px 5px 5px black);
+}
+/* drop zone - glass bowl */
 #bowl{
   position: fixed; 
   left: 0; 
   right: 0; 
+  bottom: 0;
   margin-left: auto; 
   margin-right: auto; 
   width: 35%;
-  bottom: 0;
   z-index: -1;
   }
-
-button{
-  position: fixed; 
-  left: 0; 
+/* bell to check if fruit salad is complete */
+#bell{
+  position: fixed;
   right: 0; 
-  margin: 5px;
+  bottom: 2.5%;
   margin-left: auto; 
   margin-right: auto; 
-  bottom: 2.5%;
+  padding: 20px;
+  padding-right: 40px;
+  width: 10%;
   z-index: 1;
   }
-  
+ 

@@ -1,60 +1,49 @@
 
-
 "use strict";
 
-let fruits = $('.fruits span');
-//let $salad = $.makeArray(document.getElementsByClassName('.fruit')); 
+// positionning all food items randomly in the food area
+$('.food').each(function () {
+    let posx = Math.floor((Math.random() * 80));
+    let posy = Math.floor((Math.random() * 90));
+    $(this).css({
+        "position": 'relative',
+        "left": posx + 'px',
+        "top": posy + 'px',
+    });
+})
 
-
-/*
-var posx = Math.floor((Math.random() * 100) + 1);
-var posy = Math.floor((Math.random() * 200) + 1);
-
-  $(document).ready(function() {
-      $('.food').css({
-          "position":'absolute',
-          "left":posx+'px',
-          "top":posy+'px',
-      });
-  });
-*/
-
-$('#solved-dialog').dialog( {
+// dialog box for when fruit salad will be complete
+$('#solved-dialog').dialog({
     autoOpen: false,
     buttons: {
-        "I know.": function() {
-        $(this).dialog('close');
+        "pay the bill": function () {
+            $(this).dialog('close');
         }
     }
 });
 
-// event to transform draggable leters
-$('.fruit').one('mouseover', function(event) {
-    $(this).toggleClass('fruit found');
-  });
-  
-  // Let the user drag secret letters via a clone helper
+// event to transform draggable fruits
+$('.fruit').one('mouseover', function (event) {
+});
+
 $('.fruit').draggable({
     revert: 'invalid',
     helper: 'original',
     opacity: 0.5
 });
 
-//droppable zone for answer
+// droppable zone to make fruit salad
 $('#bowl').droppable({
-    drop: function(event, ui) {
-           ui.draggable.draggable('disable'); // prevents letter to be dragged more than once
-        }
-    });
-
-$('#button').click(function() {
-    if ($.contains(document, fruits[0])) {
-        alert("yiha");
-    };
+    drop: function (event, ui) {
+        ui.draggable.draggable('disable'); // prevents letter to be dragged more than once
+        ui.draggable.removeClass('found'); // removes found class 
+    }
 });
 
-
-    /*
-    if ($(this).text() === fruits) {
+// clicking on bell to check if answer is right
+$('#bell').click(function () {
+    if ($('.found').length == 0) {
         $('#solved-dialog').dialog('open');
-    }*/
+    }
+});
+
