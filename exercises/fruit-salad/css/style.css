@@ -21,35 +21,64 @@ h2 {
 }
 
 #fruit-area {
-  font-size: 1.5rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  margin-top: 10%;
   }
 
+.food {
+  z-index: 2;
+}
+
+.food:hover {
+  filter:drop-shadow(5px 5px 5px black);
+}
+
 .fruit img {
-  width: 100px;
+  width: 90px;
+  }
+
+.found img {
+  width: 90px;
   }
 
 .veggie img {
-  width: 170px;
+  width: 130px;
   }
 
-#veg img{
+.veg img{
+  width: 60px;
+}
+
+.veg2 img{
   width: 80px;
 }
 
-#veg2 img{
-  width: 100px;
-}
-
 #bowl{
-  position: absolute; 
+  position: fixed; 
   left: 0; 
   right: 0; 
   margin-left: auto; 
   margin-right: auto; 
   width: 35%;
   bottom: 0;
+  z-index: -1;
+  }
+
+button{
+  position: fixed; 
+  left: 0; 
+  right: 0; 
+  margin: 5px;
+  margin-left: auto; 
+  margin-right: auto; 
+  bottom: 2.5%;
+  z-index: 1;
   }
   
-.found {
-  color: red;
-  }

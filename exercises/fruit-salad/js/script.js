@@ -2,7 +2,22 @@
 
 "use strict";
 
-let secret = 'Theremin';
+let fruits = $('.fruits span');
+//let $salad = $.makeArray(document.getElementsByClassName('.fruit')); 
+
+
+/*
+var posx = Math.floor((Math.random() * 100) + 1);
+var posy = Math.floor((Math.random() * 200) + 1);
+
+  $(document).ready(function() {
+      $('.food').css({
+          "position":'absolute',
+          "left":posx+'px',
+          "top":posy+'px',
+      });
+  });
+*/
 
 $('#solved-dialog').dialog( {
     autoOpen: false,
@@ -14,27 +29,32 @@ $('#solved-dialog').dialog( {
 });
 
 // event to transform draggable leters
-$(`.secret`).one(`mouseover`, function(event) {
-    $(this).addClass(`found`, 500);
+$('.fruit').one('mouseover', function(event) {
+    $(this).toggleClass('fruit found');
   });
   
   // Let the user drag secret letters via a clone helper
-  $(`.secret`).draggable({
-    helper: `clone`
-  });
-
-//droppable zone for answer
-$('#answer').droppable({
-    drop: function(event, ui) {
-
-        let letter = ui.draggable.text();
-        $(this).append(letter);
-        ui.draggable.draggable('disable'); // prevents letter to be dragged more than once
-        ui.draggable.removeClass('found', 500); // letter in no longer highlighted once its been dragged
-             // check if its correct
-        if ($(this).text() === secret) {
-            $('#solved-dialog').dialog('open');
-        }
-    }
+$('.fruit').draggable({
+    revert: 'invalid',
+    helper: 'original',
+    opacity: 0.5
 });
 
+//droppable zone for answer
+$('#bowl').droppable({
+    drop: function(event, ui) {
+           ui.draggable.draggable('disable'); // prevents letter to be dragged more than once
+        }
+    });
+
+$('#button').click(function() {
+    if ($.contains(document, fruits[0])) {
+        alert("yiha");
+    };
+});
+
+
+    /*
+    if ($(this).text() === fruits) {
+        $('#solved-dialog').dialog('open');
+    }*/
