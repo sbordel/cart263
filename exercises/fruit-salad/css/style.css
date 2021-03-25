@@ -1,18 +1,55 @@
 /*********************************************
 
 **********************************************/
+@font-face {
+  font-family: 'Pianika';
+  src: url(../assets/fonts/pianika.ttf);
+}
+
+/* setting image as background */
+html{
+  overflow: hidden;
+}
+
+h2 {
+  font-family: 'Pianika';
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 30%;
+  font-size: 2.5rem;
+}
 
 #fruit-area {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+  }
+
+.fruit img {
+  width: 100px;
+  }
+
+.veggie img {
+  width: 170px;
+  }
+
+#veg img{
+  width: 80px;
+}
+
+#veg2 img{
+  width: 100px;
+}
+
+#bowl{
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 35%;
+  bottom: 0;
   }
   
-  #answer {
-    font-size: 2rem;
-    margin-top: 2rem;
-    height: 2rem;
-    border: 1px solid black;
-  }
-  
-  .found {
-    color: red;
+.found {
+  color: red;
   }
