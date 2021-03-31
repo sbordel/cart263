@@ -1,6 +1,40 @@
 /*********************************************
 
-Here is a description of any special CSS used.
-By default that's nothing.
+description***
 
 **********************************************/
+
+/*
+@font-face {
+    font-family: '';
+    src: url(assets/fonts/);
+  }*/
+
+    /* setting image as background */
+  html{
+    width: auto;
+    height: auto;
+    background-image: url('../assets/images/background_6.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    display: grid; 
+    align-content: center;
+    height: 100vh; 
+    overflow: hidden; 
+  }
+
+  #droppableFrame{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: auto;   
+  }
+  
