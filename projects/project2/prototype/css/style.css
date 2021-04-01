@@ -18,37 +18,64 @@ description***
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    z-index: 1;
+    z-index: 0;
   }
-  
   body {
     padding: 0;
     margin: 0;
-    display: grid; 
+    display: flex;
+    justify-content: center;
     align-content: center;
     height: 100vh; 
-    overflow: hidden; 
+    overflow: hidden;
+    z-index: 1;
   }
-
+  #htmlCanvas{
+    position: absolute;
+    top: 15vh;
+    width: 100%;
+  }
+  #p5Canvas{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0;
+    z-index: 3;
+  }
+  /* drop zone */
   #droppableFrame{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    height: auto;   
+    height: auto;  
+    z-index: 3; 
   }
-  
+  #imgDropped{
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vh;
+    z-index: 5;
+  }
+  /* fence container */
+  #fences {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    z-index: 4; 
+  }
+  /* fence child */
   .fence{ 
-  display: block;
-  width: 50%;
-  }
-
+    width: 30%;
+    margin-top:10%;
+    }
   #fenceLeft {
-  position: absolute;
-  left: 0;
+    position: absolute;
+    left: 0;
   }
-
   #fenceRight {
-  position: absolute;
-  right: 0;
+    position: absolute;
+    right: 0;
   }

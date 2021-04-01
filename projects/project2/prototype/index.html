@@ -12,20 +12,27 @@
 
     <!-- library script(s) -->
     <script src="js/libraries/p5.min.js"></script>
-    <script src="js/libraries/p5.sound.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
   </head>
 
   <body>
-      <!-- My script(s) -->
-    <script src="js/script.js"></script>
+    <div id="htmlCanvas">
     <!-- HTML  -->
-    <div id="fenceLeft"><img class="fence" src="assets/images/fence01.png" alt=""></div>
-    <section id="dropSection">
+    <div id="fences"><img class="fence" id="fenceLeft"  src="assets/images/fence01_1.png" alt="">
+    <img class="fence" id="fenceRight" src="assets/images/fence02_2.png" alt=""></div>
+
     <img id="droppableFrame" src="assets/images/frame_3.png" alt="organic shaped frame">
-    </section>
-    <div id="fenceRight"><img class="fence" src="assets/images/fence02.png" alt=""></div>
+    </div>
+
+    <img id="imgDropped" src="assets/images/smile.png" alt="organic shaped frame">
+
+    <div id="p5Canvas">
+    </div>
+
+        <!-- My script(s) -->
+        <script src="js/script.js"></script>
   </body>
 
 </html>
