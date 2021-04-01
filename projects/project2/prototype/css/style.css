@@ -38,3 +38,17 @@ description***
     height: auto;   
   }
   
+  .fence{ 
+  display: block;
+  width: 50%;
+  }
+
+  #fenceLeft {
+  position: absolute;
+  left: 0;
+  }
+
+  #fenceRight {
+  position: absolute;
+  right: 0;
+  }
