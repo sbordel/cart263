@@ -31,9 +31,10 @@ function windowResized() {
 }
 
 function changeText(file){
-  fileName.innerHTML = text(file.name);
-  fileSize.innerHTML = text(file.type);
-  fileType.innerHTML = text(file.size);
+  fileName.innerHTML = file.name;
+  fileSize.innerHTML = file.size;
+  fileType.innerHTML = file.subtype;
+  fileDate.innerHTML = file.file.lastModifiedDate;
 }
 
 function gotFile(file) {

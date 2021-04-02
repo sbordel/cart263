@@ -67,7 +67,6 @@ description***
     display: none;
     margin-left: auto;
     margin-right: auto;
-    margin-left: 20%;
     top: 34vh;
     font-family: 'CP437';
     color: #000000;
@@ -76,10 +75,15 @@ description***
   p{
     background: #a1dbbf;
   }
+  span{
+    font-style: italic;
+    color: #0000ff;
+  }
   #flowers{
     position:absolute;
     bottom:0;
     z-index: 5;
     width: 60vh;
   }
+  
 
