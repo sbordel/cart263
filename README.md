@@ -19,4 +19,8 @@
 
 ###projects
 
-[P1: sonny & pierre-jimmy](https://sbordel.github.io/cart263/projects/a-night-at-the-movies/index.html)
+[P1: sonny & pierre-jimmy](https://sbordel.github.io/cart263/projects/project1/a-night-at-the-movies/index.html)
+
+[P2: welcome to the electric garden (PROPOSAL DOCUMENT)](https://sbordel.github.io/cart263/projects/project2/prototype/proposal/BordeleauS_CART263_P2proposal.pdf)
+
+[P2: welcome to the electric garden (PROTOTYPE)](https://sbordel.github.io/cart263/projects/project2/prototype/index.html)
