@@ -7,6 +7,12 @@ This is a prototype for the index page of my project
 
 "use strict";
 
+let fileName = document.getElementById(`line1`);
+let fileSize = document.getElementById(`line2`);
+let fileType = document.getElementById(`line3`);
+let fileDate = document.getElementById(`line4`);
+
+
 function setup() {
   // create canvas
   var dropZone = createCanvas(windowWidth, windowHeight);
@@ -24,8 +30,15 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+function changeText(file){
+  fileName.innerHTML = text(file.name);
+  fileSize.innerHTML = text(file.type);
+  fileType.innerHTML = text(file.size);
+}
+
 function gotFile(file) {
   let successImg = document.getElementById('imgDropped');
+  let fileInfo = document.getElementById('fileInfo');
   console.log(file);
   // If it's an image file
   if (file.type === 'image') {
@@ -34,29 +47,13 @@ function gotFile(file) {
     // Draw the image onto the canvas
     image(img, 0, 0, width, height);
     successImg.style.display = 'block';
+    changeText(file);
+    fileInfo.style.display = 'block';
+
   } else { 
     successImg.style.display = 'block';
+    fileInfo.style.display = 'block';
   }
 }
 
-
-/*
-$('#dropSection').fileDrop({
-  onFileRead : function(fileCollection){
-      $.each(fileCollection, function(){
-          //Do stuff with fileCollection here!
-      });
-  },
-  overClass : 'my-custom-class',
-  addClassTo : '#anotherElement',
-  decodebase64 : true
-});*/
-
-  
-    
-/*
-$('#dropSection').droppable({
-    drop: function (event, ui) {
-        
-    }
-});*/
+//$(fileName).text(inputName);

@@ -4,16 +4,13 @@ description***
 
 **********************************************/
 
+/*
 @font-face {
-  font-family: 'CP437';
-  src: url(WEB/cp437-thin_8x16.woff);
-}
+    font-family: '';
+    src: url(assets/fonts/);
+  }*/
 
-@font-face {
-  font-family: 'Aquarius';
-  src: url(WEB/polyducks_12x12.woff);
-}
-
+    /* setting image as background */
   html{
     width: auto;
     height: auto;
@@ -51,35 +48,34 @@ description***
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    width: 40%;
+    height: auto;  
     z-index: 3; 
   }
   #imgDropped{
     display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vh;
+    z-index: 5;
+  }
+  /* fence container */
+  #fences {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    z-index: 4; 
+  }
+  /* fence child */
+  .fence{ 
+    width: 30%;
+    margin-top:10%;
+    }
+  #fenceLeft {
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30vh;
-    top: 40vh;
-    z-index: 5;
+    left: 0;
   }
-  #fileInfo{
-    display: none;
-    margin-left: auto;
-    margin-right: auto;
-    margin-left: 20%;
-    top: 34vh;
-    font-family: 'CP437';
-    color: #000000;
-    z-index: 5;
+  #fenceRight {
+    position: absolute;
+    right: 0;
   }
-  p{
-    background: #a1dbbf;
-  }
-  #flowers{
-    position:absolute;
-    bottom:0;
-    z-index: 5;
-    width: 60vh;
-  }
-
