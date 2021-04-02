@@ -72,6 +72,12 @@ description***
     color: #000000;
     z-index: 5;
   }
+  h1{
+    display: block;
+    font-family: 'CP437';
+    color: #0000ff;
+    font-size: 20px;
+  }
   p{
     background: #a1dbbf;
   }
@@ -85,5 +91,5 @@ description***
     z-index: 5;
     width: 60vh;
   }
-  
+
 

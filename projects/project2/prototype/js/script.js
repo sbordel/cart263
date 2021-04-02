@@ -7,11 +7,12 @@ This is a prototype for the index page of my project
 
 "use strict";
 
-let fileName = document.getElementById(`line1`);
-let fileSize = document.getElementById(`line2`);
-let fileType = document.getElementById(`line3`);
-let fileDate = document.getElementById(`line4`);
+let fileName = document.getElementById('line1');
+let fileSize = document.getElementById('line2');
+let fileType = document.getElementById('line3');
+let fileDate = document.getElementById('line4');
 
+let instructions = document.getElementById('instruct');
 
 function setup() {
   // create canvas
@@ -47,6 +48,7 @@ function gotFile(file) {
     const img = createImg(file.data).hide();
     // Draw the image onto the canvas
     image(img, 0, 0, width, height);
+    instructions.style.display = 'none';
     successImg.style.display = 'block';
     changeText(file);
     fileInfo.style.display = 'block';
