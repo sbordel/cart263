@@ -5,4 +5,20 @@ class Boot extends Phaser.Scene {
         });
     }
 
+    preload() {
+        //load assets here
+
+        this.load.on('complete', () => {
+            this.scene.start('play');
+        });
+    }
+
+    create() {
+
+    }
+
+    update() {
+
+    }
+
 }
