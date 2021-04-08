@@ -1,7 +1,14 @@
-/*
+/* ***************** 
 Code written by Sabine Rosenberg
 
-*/
+Data-set of 150 Flower Drawings (flowers.json)
+taken from The Quick, Draw! Dataset provided by Google
+https://github.com/googlecreativelab/quickdraw-dataset
+
+this data-set is licensed under CC BY 4.0 
+https://creativecommons.org/licenses/by/4.0/
+
+***************** */
 
 let word;
 let wordTwo;
@@ -18,7 +25,7 @@ function gotFlowers(data){
 for(let i=0; i< data.length; i++){
   console.log(data[i]);
 }
-//draw the flowers (have 4 )
+//draw the flowers (have 4)
 gotFlower(data[0],0,0);
 gotFlower(data[1],255,0);
 gotFlower(data[2],0,255);
