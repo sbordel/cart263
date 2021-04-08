@@ -1,150 +1,149 @@
-petals: #8 stem: (y)/n button: y/(n) // -=chaotic #=many petals 
-5 n y
-5 n y
-# y y l
-6 y y .
-6 y y .
-5 y n .
-3 y y .
-4 y n .
-5 y y .
-5 n y .
-4 y n .
-4 y y .
-5 y y l 
-8 y y .
-7 y y l
-5 y y .
-7 y y .
-5 y y .
-5 y y .
-4 y y .
-# y y .
-5 n y .
-- y n .
-4 y y l
-6 y y .
-5 y y .
-5 y y .
-5 y y .
-3 y n .
-5 y y .
-5 y y .
-- y y .
-- y y .
-- y y .
-7 n y .
-7 y y .
-- y n .
-5 y y l
-3 y y .
-6 y y .
-# y y .
-4 y n .
-4 y y .
-6 y y .
-6 y y .
-3 y y .
-- n y .
-- y y .
-- n y .
-4 y y .
-5 y y .
-4 y y l
-4 n y .
-- y n (tulip) l
-# y y .
-3 y n .
-3 y y l
-4 y y l
-6 y y l
-- y y .
-- y y .
-5 y y l
-6 y y l
-4 y y .
-4 y y l
-6 n y .
-6 y y .
-4 y y l
-5 y y .
-3 y n l 
-4 n y .
-6 y y .
-4 y y .
-6 n y .
-- y y .
-# y y .
-# y y l
-- y y l 
-4 n y .
-# y y .
-7 y y l
-6 y y .
-5 y y .
-5 y y l
-5 y y l
-3 y y .
-6 y y l
-5 y y .
-4 y y l
-5 y y .
-6 y y .
-5 y y .
-- y y .
-3 y y l
-5 y y .
-- n y .
-# y y .
-6 y y l 
-# y y .
-- y y .
-5 y y .
-7 n y .
-(4 tulips)
-- y n .
-# y y l
-# n y .
-5 y y l
-5 y y l
-6 y y .
-4 y y l
-3 y y .
-4 y y l
-5 n y .
-# n y .
-4 y y .
-# y y .
-5 y y l
-5 y y .
-- y y l
-4 y y .
-5 y y .
-5 n y .
-5 y y l
-7 y y .
-7 n y .
-5 n y .
-5 y y .
-# y y .
-5 n y .
-5 y y l
-- y y .
-- y n l
-4 y y l 
-4 y y l
-4 y n .
-5 y y .
-# y y l
-8 y y l
-8 n y .
-# y y .
-# n y .
-5 y y .
-5 y y .
-7 y y l
-4 y y .
-7 y y .
-# y y .
-5 y y . 
-4 y y .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+99 y y n
+5 y y n 
+4 y y n
