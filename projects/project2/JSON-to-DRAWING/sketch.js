@@ -1,5 +1,5 @@
 /* ***************** 
-Code written by Sabine Rosenberg
+Original code written by Sabine Rosenberg
 
 Data-set of 150 Flower Drawings (flowers.json)
 taken from The Quick, Draw! Dataset provided by Google
@@ -17,7 +17,7 @@ let myNums = [];
 function setup() {
   // put setup code here
     createCanvas(600, 600);
-    background(0);
+    clear();
     //loadJSON('/flower', gotFlower);
     loadJSON('flowers.json', gotFlowers);
 }
@@ -35,7 +35,7 @@ gotFlower(data[3],255,255);
 function gotFlower(data,offsetX,offsetY){
   console.log(data.drawing);
   noFill();
-  stroke(255);
+  stroke(0);
 beginShape();
   for(let path of data.drawing){
     for(let i =0; i<path[0].length;i++){
