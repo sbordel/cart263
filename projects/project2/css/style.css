@@ -1,6 +1,19 @@
-/*********************************************
-
-Here is a description of any special CSS used.
-By default that's nothing.
-
-**********************************************/
+html {
+    width: auto;
+    height: auto;
+    background-image: url('../assets/images/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 0;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh; 
+    overflow: hidden;
+    z-index: 1;
+  }
