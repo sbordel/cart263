@@ -1,12 +1,9 @@
 /* ***************** 
-Original code written by Sabine Rosenberg
 
-Data-set of 150 Flower Drawings (flowers.json)
-taken from The Quick, Draw! Dataset provided by Google
-https://github.com/googlecreativelab/quickdraw-dataset
+WELCOME TO THE ELECTRIC GARDEN
+Sam Bordeleau
 
-this data-set is licensed under CC BY 4.0 
-https://creativecommons.org/licenses/by/4.0/
+(see README file for credits)
 
 ***************** */
 
