@@ -10,30 +10,32 @@ https://creativecommons.org/licenses/by/4.0/
 
 ***************** */
 
-let word;
-let wordTwo;
-let myNums = [];
+let flowerDrawings;
 
 function setup() {
-  // put setup code here
-    createCanvas(600, 600);
+//create canvas and make background transparent
+    createCanvas(windowWidth, windowHeight);
     clear();
-    //loadJSON('/flower', gotFlower);
-    loadJSON('flowers.json', gotFlowers);
-}
-function gotFlowers(data){
+
+    flowerDrawings = loadJSON('assets/data/flowers.json', drawFlowers);
+    console.log(flowerDrawings.key)
+  }
+
+function drawFlowers(data){
 for(let i=0; i< data.length; i++){
   console.log(data[i]);
 }
-//draw the flowers (have 4)
-gotFlower(data[0],0,0);
+//draw specified flowers from the flowers.json JSON file 
+gotFlower(data[7],0,0);
 gotFlower(data[1],255,0);
 gotFlower(data[2],0,255);
 gotFlower(data[3],255,255);
+
 }
 
 function gotFlower(data,offsetX,offsetY){
   console.log(data.drawing);
+  console.log(data.key);
   noFill();
   stroke(0);
 beginShape();
