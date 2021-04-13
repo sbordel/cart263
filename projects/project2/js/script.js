@@ -7,12 +7,16 @@ This is a prototype for the index page of my project
 
 "use strict";
 
-let fileName = document.getElementById('line1');
+let droppedFile;
+//let splicedDate;
+let newDate;
+
+//let fileName = document.getElementById('line1');
 let fileSize = document.getElementById('line2');
 let fileType = document.getElementById('line3');
 let fileDate = document.getElementById('line4');
 
-let instructions = document.getElementById('instruct');
+//let instructions = document.getElementById('instruct');
 
 function setup() {
   // create canvas
@@ -32,7 +36,7 @@ function windowResized() {
 }
 
 function changeText(file){
-  fileName.innerHTML = file.name;
+  //fileName.innerHTML = file.name;
   fileSize.innerHTML = file.size;
   fileType.innerHTML = file.subtype;
   fileDate.innerHTML = file.file.lastModifiedDate;
@@ -42,13 +46,16 @@ function gotFile(file) {
   let successImg = document.getElementById('imgDropped');
   let fileInfo = document.getElementById('fileInfo');
   console.log(file);
+
+  droppedFile = file;
+
+  //droppedFile = createP(file.data);
   // If it's an image file
   if (file.type === 'image') {
     // Create an image DOM element but don't show it
     const img = createImg(file.data).hide();
     // Draw the image onto the canvas
     image(img, 0, 0, width, height);
-    instructions.style.display = 'none';
     successImg.style.display = 'block';
     changeText(file);
     fileInfo.style.display = 'block';
@@ -57,6 +64,12 @@ function gotFile(file) {
     successImg.style.display = 'block';
     fileInfo.style.display = 'block';
   }
+  splicingDate();
+}
+
+function splicingDate() {
+  newDate = fileDate.split(' ', 2);
+  console.log(newDate);
 }
 
 //$(fileName).text(inputName);
