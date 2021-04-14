@@ -11,12 +11,9 @@ let droppedFile;
 //let splicedDate;
 let newDate;
 
-//let fileName = document.getElementById('line1');
-let fileSize = document.getElementById('line2');
-let fileType = document.getElementById('line3');
-let fileDate = document.getElementById('line4');
-
-//let instructions = document.getElementById('instruct');
+let fileSize;
+let fileType;
+let fileDate;
 
 function setup() {
   // create canvas
@@ -35,16 +32,8 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-function changeText(file){
-  //fileName.innerHTML = file.name;
-  fileSize.innerHTML = file.size;
-  fileType.innerHTML = file.subtype;
-  fileDate.innerHTML = file.file.lastModifiedDate;
-}
-
 function gotFile(file) {
   let successImg = document.getElementById('imgDropped');
-  let fileInfo = document.getElementById('fileInfo');
   console.log(file);
 
   droppedFile = file;
@@ -57,19 +46,33 @@ function gotFile(file) {
     // Draw the image onto the canvas
     image(img, 0, 0, width, height);
     successImg.style.display = 'block';
-    changeText(file);
-    fileInfo.style.display = 'block';
-
-  } else { 
+  } else {
     successImg.style.display = 'block';
-    fileInfo.style.display = 'block';
   }
-  splicingDate();
+
+  fileSize = file.size;
+  fileType = file.subtype;
+  fileDate = file.file.lastModifiedDate;
+
+  //splicedDate();
 }
 
-function splicingDate() {
-  newDate = fileDate.split(' ', 2);
-  console.log(newDate);
-}
+/** need to fix this because fileDate isnt a String **/
+//reference here (go to RegExp section): 
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+//reg exp character classes:
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 
-//$(fileName).text(inputName);
+/*
+function splicedDate() {
+  let splitString = split(fileDate, ' ');
+  let day = text(splitString[0], 5, 30);
+  let month = text(splitString[1], 5, 50);
+  let date = text(splitString[2], 5, 70);
+
+  console.log(fileDate);
+  console.log(day);
+  console.log(month);
+  console.log(date);
+}
+*/
