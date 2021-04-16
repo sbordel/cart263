@@ -14,7 +14,7 @@ https://creativecommons.org/licenses/by/4.0/
 function setup() {
   // put setup code here
   createCanvas(600, 600);
-  background(0);
+  background(255);
   loadJSON('test_flower.json', gotFlowers);
 }
 function gotFlowers(data) {
@@ -32,7 +32,7 @@ function gotFlowers(data) {
 function gotFlower(data, offsetX, offsetY) {
   console.log(data.drawing);
   noFill();
-  stroke(255);
+  stroke(0);
   beginShape();
   for (let path of data.drawing) {
     for (let i = 0; i < path[0].length; i++) {

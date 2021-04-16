@@ -16,15 +16,15 @@ let fileType; // string
 let fileDate; // date
 
 //variables for droppedFile; date properties 
-// all numbers
-let fileYear; 
-let fileMonth; 
-let filedateNum; 
-let fileHours; 
-let fileMin; 
-let fileSec; 
-let fileMilli; 
-let fileDay; 
+// type: all numbers
+let fileYear;
+let fileMonth;
+let filedateNum;
+let fileHours;
+let fileMin;
+let fileSec;
+let fileMilli;
+let fileDay;
 
 
 function setup() {
@@ -40,10 +40,13 @@ function draw() {
   noLoop();
 }
 
+// canvas resizes when window is resized
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+/* receives dropped file, triggers an event to show that file has been received
+and assigns the files properties to variables (fileSize, fileType & fileDate) */
 function gotFile(file) {
   let successImg = document.getElementById('imgDropped');
   console.log(file);
@@ -63,7 +66,7 @@ function gotFile(file) {
   fileSize = file.size;
   fileType = file.subtype;
   fileDate = file.file.lastModifiedDate;
-
+  // triggers event that splices file timestamp
   splicedDate();
 }
 
@@ -79,15 +82,6 @@ function splicedDate() {
   fileSec = fileDate.getSeconds(); // 0-59
   fileMilli = fileDate.getMilliseconds(); // 0-999
   fileDay = fileDate.getDay(); // 0-6
-
-  console.log(fileYear);
-  console.log(fileMonth);
-  console.log(filedateNum);
-  console.log(fileHours);
-  console.log(fileMin);    
-  console.log(fileSec);
-  console.log(fileMilli);
-  console.log(fileDay);
 }
 
 /*
