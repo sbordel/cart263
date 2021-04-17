@@ -45,6 +45,19 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+// gets user location with ipify API 
+$(function getUserLocation() {
+  $.getJSON("https://geo.ipify.org/api/v1?apiKey=at_OZGboRjmnwnVC8rVin6gnzz0BOWWQ",
+      function (text) {
+
+          let userCountry = text.location.country;
+          let userRegion = text.location.region;
+
+          console.log(userCountry + ", " + userRegion);
+      }
+  );
+});
+
 /* receives dropped file, triggers an event to show that file has been received
 and assigns the files properties to variables (fileSize, fileType & fileDate) */
 function gotFile(file) {
@@ -100,4 +113,3 @@ tulip = -1
 not defined = 0
 chaotic = 99
 */
-
