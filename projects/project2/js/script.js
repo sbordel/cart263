@@ -26,6 +26,9 @@ let fileSec;
 let fileMilli;
 let fileDay;
 
+let userCountry;
+let userRegion;
+
 
 function setup() {
   // Creates a canvas
@@ -49,10 +52,9 @@ function windowResized() {
 $(function getUserLocation() {
   $.getJSON("https://geo.ipify.org/api/v1?apiKey=at_OZGboRjmnwnVC8rVin6gnzz0BOWWQ",
       function (text) {
-
-          let userCountry = text.location.country;
-          let userRegion = text.location.region;
-
+          userCountry = text.location.country;
+          userRegion = text.location.region;
+          
           console.log(userCountry + ", " + userRegion);
       }
   );
