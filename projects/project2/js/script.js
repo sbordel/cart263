@@ -10,13 +10,12 @@ Samuelle Bordeleau
 //variable assigned to a file that is dropped in the drop zone
 let droppedFile;
 
-//variables for droppedFile; properties
+//variables for droppedFile properties
 let fileSize; // number
 let fileType; // string
 let fileDate; // date
 
-//variables for droppedFile; date properties 
-// type: all numbers
+//variables for droppedFile date properties 
 let fileYear;
 let fileMonth;
 let filedateNum;
@@ -26,8 +25,14 @@ let fileSec;
 let fileMilli;
 let fileDay;
 
+//variables for user's location
 let userCountry;
 let userRegion;
+
+//variables for flowerData
+let flowerData;
+let flowerMonth;
+let flowerDay;
 
 
 function setup() {
@@ -35,9 +40,14 @@ function setup() {
   var dropZone = createCanvas(windowWidth, windowHeight);
   dropZone.parent('p5Canvas');
   background(0);
+
+  flowerData = loadJSON('assets/data/flower_test.json');
+  //console.log(flowerData.key)
+
   // Adds an event for when a file is dropped onto the canvas
   dropZone.drop(gotFile);
 }
+
 
 function draw() {
   noLoop();
@@ -51,12 +61,12 @@ function windowResized() {
 // gets user location with ipify API 
 $(function getUserLocation() {
   $.getJSON("https://geo.ipify.org/api/v1?apiKey=at_OZGboRjmnwnVC8rVin6gnzz0BOWWQ",
-      function (text) {
-          userCountry = text.location.country;
-          userRegion = text.location.region;
-          
-          console.log(userCountry + ", " + userRegion);
-      }
+    function (text) {
+      userCountry = text.location.country;
+      userRegion = text.location.region;
+
+      //console.log(userCountry + ", " + userRegion);
+    }
   );
 });
 
@@ -79,39 +89,53 @@ function gotFile(file) {
   }
   // assign droppedFile properties to variables
   fileSize = file.size;
-  fileType = file.subtype;
+  fileType = file.type;
   fileDate = file.file.lastModifiedDate;
   // triggers event that splices file timestamp
   splicedDate();
-}
+  mapflowerSeasons();
+};
 
 /* splices the droppedFile's timestamp into corresponding time property variables
    timestamp format ==> Wed Apr 14 2021 11:41:13 GMT-0400 (GMT-04:00) */
-
 function splicedDate() {
   fileYear = fileDate.getFullYear(); // YYYY
   fileMonth = fileDate.getMonth(); // 0-11
-  filedateNum = fileDate.getDate(); // 1-31
+  fileDay = fileDate.getDate(); // 1-31
   fileHours = fileDate.getHours(); // 0-23
   fileMin = fileDate.getMinutes(); // 0-59
   fileSec = fileDate.getSeconds(); // 0-59
   fileMilli = fileDate.getMilliseconds(); // 0-999
-  fileDay = fileDate.getDay(); // 0-6
-}
+  //fileDayofWeek = fileDate.getDay(); // 0-6
+};
 
-/*
-JSON FILE DATA TYPE
+function mapflowerSeasons() {
+  flowerDay = flowerData.day;
+  console.log(flowerDay);
+};
 
-stem, button: boolean
-countrycode: string
-leaf, petals, day, hour, minutes, seconds, millis, key: number
-*/
+function flowerSeasons() {
+  //spring : march 20 to june 21
+  if ((flowerMonth == 3 && flowerDay >= 20 && flowerDay <= 31)
+    || (flowerMonth == 4 && flowerDay >= 1 && flowerDay <= 30)
+    || (flowerMonth == 5 && flowerDay >= 1 && flowerDay <= 31)
+    || (flowerMonth == 6 && flowerDay >= 1 && flowerDay <= 21)) {
+    flowerSeason = "Spring";
+  }
+  //summer : june 21 to 22 september
+  else if ((flowerMonth == 6 && flowerDay >= 21 && flowerDay <= 31)
+    || (flowerMonth == 7 && flowerDay >= 1 && flowerDay <= 31)
+    || (flowerMonth == 8 && flowerDay >= 1 && flowerDay <= 31)
+    || (flowerMonth == 9 && flowerDay >= 1 && flowerDay <= 22)) {
+    flowerSeason = "Summer";
+  }
+  //fall : 22 september to 21 december
+  else if ((flowerMonth == 9 && flowerDay >= 22 && flowerDay <= 31)
+    || (flowerMonth == 10 && flowerDay >= 1 && flowerDay <= 31)
+    || (flowerMonth == 11 && flowerDay >= 1 && flowerDay <= 31)
+    || (flowerMonth == 12 && flowerDay >= 1 && flowerDay <= 21)) {
+    flowerSeason = "Fall";
+  }
+};
 
 
-/*
-NOTES FOR PETAL VARIABLES IN JSON FILE
-
-tulip = -1
-not defined = 0
-chaotic = 99
-*/
