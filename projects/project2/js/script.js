@@ -29,7 +29,7 @@ let fileDay;
 let userCountry;
 let userRegion;
 
-//variables for flowerData
+//variables each flower's properties (flowerData)
 let flowerData;
 let flowerMonth;
 let flowerDay;
