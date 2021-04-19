@@ -33,6 +33,7 @@ let userRegion;
 let flowerData;
 let flowerMonth;
 let flowerDay;
+let flowerSeason;
 
 
 function setup() {
@@ -96,8 +97,7 @@ function gotFile(file) {
   mapflowerSeasons();
 };
 
-/* splices the droppedFile's timestamp into corresponding time property variables
-   timestamp format ==> Wed Apr 14 2021 11:41:13 GMT-0400 (GMT-04:00) */
+// splices the droppedFile's timestamp into corresponding time property variables
 function splicedDate() {
   fileYear = fileDate.getFullYear(); // YYYY
   fileMonth = fileDate.getMonth(); // 0-11
@@ -106,38 +106,45 @@ function splicedDate() {
   fileMin = fileDate.getMinutes(); // 0-59
   fileSec = fileDate.getSeconds(); // 0-59
   fileMilli = fileDate.getMilliseconds(); // 0-999
-  //fileDayofWeek = fileDate.getDay(); // 0-6
 };
 
-
+// assigns flower date properties to variables: 
 function mapflowerSeasons() {
-  flowerDay = flowerData.flowers[0].day;
-  console.log(flowerDay);
+  flowerDay = flowerData.flowers[11].day; 
+ // remaps the "hour" property of a flower to a value between the range of 0-11 (corresponding to the 12 months)
+  let monthDecimal = map(flowerData.flowers[11].hour, 0, 23, 0, 11); 
+  flowerMonth = parseInt(monthDecimal); //convert result to integer
+  flowerSeasons();
 };
 
-/*
 function flowerSeasons() {
-  //spring : march 20 to june 21
+  // spring : march 20 to june 21
   if ((flowerMonth == 3 && flowerDay >= 20 && flowerDay <= 31)
     || (flowerMonth == 4 && flowerDay >= 1 && flowerDay <= 30)
     || (flowerMonth == 5 && flowerDay >= 1 && flowerDay <= 31)
     || (flowerMonth == 6 && flowerDay >= 1 && flowerDay <= 21)) {
     flowerSeason = "Spring";
   }
-  //summer : june 21 to 22 september
+  // summer : june 21 to september 22
   else if ((flowerMonth == 6 && flowerDay >= 21 && flowerDay <= 31)
     || (flowerMonth == 7 && flowerDay >= 1 && flowerDay <= 31)
     || (flowerMonth == 8 && flowerDay >= 1 && flowerDay <= 31)
     || (flowerMonth == 9 && flowerDay >= 1 && flowerDay <= 22)) {
     flowerSeason = "Summer";
   }
-  //fall : 22 september to 21 december
+  // fall : september 22 to december 21
   else if ((flowerMonth == 9 && flowerDay >= 22 && flowerDay <= 31)
     || (flowerMonth == 10 && flowerDay >= 1 && flowerDay <= 31)
     || (flowerMonth == 11 && flowerDay >= 1 && flowerDay <= 31)
     || (flowerMonth == 12 && flowerDay >= 1 && flowerDay <= 21)) {
     flowerSeason = "Fall";
   }
+   // winter : december 21 to march 20
+   else if ((flowerMonth == 11 && flowerDay >= 21 && flowerDay <= 31)
+   || (flowerMonth == 0 && flowerDay >= 1 && flowerDay <= 31)
+   || (flowerMonth == 1 && flowerDay >= 1 && flowerDay <= 31)
+   || (flowerMonth == 3 && flowerDay >= 1 && flowerDay <= 20)) {
+   flowerSeason = "Winter";
+ }
+  console.log(flowerSeason);
 };
-*/
-
