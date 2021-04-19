@@ -109,11 +109,13 @@ function splicedDate() {
   //fileDayofWeek = fileDate.getDay(); // 0-6
 };
 
+
 function mapflowerSeasons() {
-  flowerDay = flowerData.day;
+  flowerDay = flowerData.flowers[0].day;
   console.log(flowerDay);
 };
 
+/*
 function flowerSeasons() {
   //spring : march 20 to june 21
   if ((flowerMonth == 3 && flowerDay >= 20 && flowerDay <= 31)
@@ -137,5 +139,5 @@ function flowerSeasons() {
     flowerSeason = "Fall";
   }
 };
-
+*/
 
