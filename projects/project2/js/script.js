@@ -18,16 +18,12 @@ let fileDate; // date
 /* variables for droppedFile date properties */
 let fileYear;
 let fileMonth;
-let filedateNum;
-let fileHours;
-let fileMin;
-let fileSec;
-let fileMilli;
 let fileDay;
 
-/* variables for user's location */
+/* variables for user's location et access  */
 let userCountry;
 let userRegion;
+let userAccessDate;
 
 /* variables each flower's properties (flowerData) */
 let flowerData;
@@ -40,18 +36,19 @@ function setup() {
   var dropZone = createCanvas(windowWidth, windowHeight);
   dropZone.parent('p5Canvas');
   background(0);
-
   // Adds an event for when a file is dropped onto the canvas
   dropZone.drop(gotFile);
-}
-
-function draw() {
-  noLoop();
+  //load json file with flower data
+  flowerData = loadJSON('assets/data/flowers.json');
 }
 
 /* canvas resizes when window is resized */
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+  noLoop();
 }
 
 /* gets user location with ipify API */
@@ -61,7 +58,11 @@ $(function getUserLocation() {
       userCountry = text.location.country;
       userRegion = text.location.region;
 
-      //console.log(userCountry + ", " + userRegion);
+      let userLocation = userCountry + ", " + userRegion;
+
+      userAccessDate = new Date();
+      let userDay = userAccessDate.getDate();
+      let userMonth = userAccessDate.getMonth() + 1;
     }
   );
 });
@@ -84,9 +85,11 @@ function gotFile(file) {
     successImg.style.display = 'block';
   }
   // assign droppedFile properties to variables
-  fileSize = file.size;
+  fileSize = file.size.toString();
+  let fileSizeLgt = fileSize.length;
   fileType = file.type;
   fileDate = file.file.lastModifiedDate;
+  console.log(fileSizeLgt);
   // triggers event that splices file timestamp
   splicedDate();
   mapflowerSeasons();
@@ -97,25 +100,29 @@ function splicedDate() {
   fileYear = fileDate.getFullYear(); // YYYY
   fileMonth = fileDate.getMonth(); // 0-11
   fileDay = fileDate.getDate(); // 1-31
-  fileHours = fileDate.getHours(); // 0-23
-  fileMin = fileDate.getMinutes(); // 0-59
-  fileSec = fileDate.getSeconds(); // 0-59
-  fileMilli = fileDate.getMilliseconds(); // 0-999
 };
+
+function flowerSelect() {
+let flowerPetals = flowerData.flower[11].petals;
+  if (fileSizeLgt == flowerPetals) {
+
+  } else if (fileSizeLgt == 0 || fileSizeLgt >= 10) {
+
+  };
+}
 
 /* assigns flowerData date/time properties to variables */
 function mapflowerSeasons() {
-  //load json file with flower data
-  flowerData = loadJSON('assets/data/flowers.json');
   //assigns day property to flowerDay
-  flowerDay = flowerData.flowers[11].day;
+  flowerDay = flowerData.flower[11].day;
   // remaps the "hour" property of a flower to a value between the range of 0-11 (corresponding to the 12 months)
   // assigns numeral value monthDecimal
-  let monthDecimal = map(flowerData.flowers[11].hour, 0, 23, 0, 11);
+  let monthDecimal = map(flowerData.flower[11].hour, 0, 23, 0, 11);
   flowerMonth = parseInt(monthDecimal); //convert result to integer and assigns it to flowerMonth
   flowerSeasons();
 };
 
+/* TO SHRINK */
 function flowerSeasons() {
   // spring == march 20 to june 21
   if ((flowerMonth == 3 && flowerDay >= 20 && flowerDay <= 31)
