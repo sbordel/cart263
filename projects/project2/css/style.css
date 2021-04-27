@@ -1,7 +1,7 @@
 html {
     width: auto;
     height: auto;
-    background-image: url('../assets/images/background.png');
+    background-image: url('../assets/images/background_2.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -10,10 +10,55 @@ html {
   body {
     padding: 0;
     margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-content: center;
-    height: 100vh; 
     overflow: hidden;
     z-index: 1;
   }
+  #indexEntrance{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    border: 2px blue dotted;
+    width: 100vw;
+    height: 100vh;
+  }
+  .pillars{
+    position: absolute; 
+    width: 13%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    z-index: 2;
+  }
+  #pillarLeft{
+    margin-left: 18vw;
+    bottom: 5vh;
+  }
+  #pillarRight{
+    margin-right: 18vw;
+    bottom: 5vh;
+  }
+  .walls{
+    position: absolute; 
+    width: 25%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    z-index: 1;
+  }
+  #wallLeft{
+    margin-left: 0vw;
+    bottom: 6vh;
+  }
+  #wallRight{
+    margin-right: 0vw;
+    bottom: 6vh;
+  }
+ 

@@ -6,23 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>p5.js flowers</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" /> 
-    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
-     <!-- JS -->
+  <!-- JS -->
   <script src="js/librairies/p5.js"></script>
   <script src="js/sketch.js"></script>
-  <script src="js/Flowers.js"></script>      
-  </head>
+  <script src="js/Flowers.js"></script>
+</head>
 
-  <body>
-    <div id="htmlCanvas">
-    <!-- HTML  -->
+<body>
+
+  <!-- HTML  -->
+  <div id="htmlCanvas">
+
+    <div id="indexEntrance">
+      <img class="pillars" id="pillarLeft" src="assets/images/pillar_left.png" alt="left pillar" title="left pillar">
+      <img class="pillars" id="pillarRight" src="assets/images/pillar_right.png" alt="right pillar" title="right pillar">
+      <img class="walls" id="wallLeft" src="assets/images/wall.png" alt="concrete brick wall" title="concrete brick wall">
+      <img class="walls" id="wallRight" src="assets/images/wall.png" alt="concrete brick wall" title="concrete brick wall">
     </div>
 
-    <div id="p5Canvas">
-    </div>
-  </body>
+  </div>
+
+   <!-- (P5 CANVAS) -->
+  <div id="p5Canvas">
+  </div>
+</body>
 
 </html>
