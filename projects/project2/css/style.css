@@ -26,6 +26,36 @@ html {
     width: 100vw;
     height: 100vh;
   }
+  #arrowLeft{
+    position: absolute; 
+    padding: 30px;
+    left: 0;
+    z-index: 5;
+  }
+  #arrowRight{
+    position: absolute; 
+    padding: 30px;
+    right: 0;
+    z-index: 5;
+  }
+  .arrows:hover{
+    filter:drop-shadow(5px 5px 10px #282f5e);
+    z-index: 5;
+  }
+  #flowerField{
+    position: absolute; 
+    width: 42vw;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 5vh;
+    z-index: 0;
+  }
+  #flowerField:hover{
+    filter:drop-shadow(30px 30px 20px #d4d9fa);
+    z-index: 5;
+  }
   .pillars{
     position: absolute; 
     width: 13%;
