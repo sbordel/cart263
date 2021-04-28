@@ -36,6 +36,7 @@ function setup() {
   var dropZone = createCanvas(windowWidth, windowHeight);
   dropZone.parent('p5Canvas');
   background(0);
+  clear();
   // Adds an event for when a file is dropped onto the canvas
   dropZone.drop(gotFile);
   //load json file with flower data
@@ -50,6 +51,19 @@ function windowResized() {
 function draw() {
   noLoop();
 }
+
+/* makes tooltips appear on hover */
+$(function () {
+  $("#tooltip-a").tooltip({
+    track: true
+  });
+  $("#tooltip-b").tooltip({
+    track: true
+  });
+  $("#tooltip-c").tooltip({
+    track: true
+  });
+});
 
 /* gets user location with ipify API */
 $(function getUserLocation() {
@@ -103,7 +117,7 @@ function splicedDate() {
 };
 
 function flowerSelect() {
-let flowerPetals = flowerData.flower[11].petals;
+  let flowerPetals = flowerData.flower[11].petals;
   if (fileSizeLgt == flowerPetals) {
 
   } else if (fileSizeLgt == 0 || fileSizeLgt >= 10) {
