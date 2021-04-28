@@ -24,38 +24,58 @@
   <!-- HTML  -->
   <div id="htmlCanvas">
 
+    <span id="header">
+      <a href="#" id="tooltip-a" title="go to info center"><img class="arrows" id="arrowLeft"
+          src="assets/images/arrow-left_small.gif" alt="right arrow"></a>
+      <a href="#" id="tooltip-b" title="go to entrance"><img class="arrows" id="arrowRight"
+          src="assets/images/arrow-right_small.gif" alt="left arrow"></a>
+      <a href="#" id="infoIcon"><img id="infoImage" src="assets/images/replacement_character.svg" alt=""></a>
+    </span >
 
-    <!-- ** INDEX ** -->
+    <!-- ** INDEX ** -- >
     <div id="indexPage">
-      <!-- header containing buttons to change page-->
+     < !-- header containing buttons to change page  -- >
       <span id="indexHeader">
         <a href="#" id="tooltip-a" title="go to greenhouse"><img class="arrows" id="arrowLeft"
             src="assets/images/arrow-left_small.gif" alt="right arrow"></a>
         <a href="#" id="tooltip-b" title="go to info center"><img class="arrows" id="arrowRight"
             src="assets/images/arrow-right_small.gif" alt="left arrow"></a>
-      </span>
+      </span >
 
-      <!-- section containing index content and image to go to garden -->
+      <! -- section containing index content and image to go to garden -- >
       <span id="tooltip-c" title="go to the garden"><a href="#"><img id="flowerField"
             src="assets/images/flower_comp.png" alt="flower field"></a></span>
       <img class="pillars" id="pillarLeft" src="assets/images/pillar_left.png" alt="left pillar">
       <img class="pillars" id="pillarRight" src="assets/images/pillar_right.png" alt="right pillar">
       <img class="walls" id="wallLeft" src="assets/images/wall.png" alt="concrete brick wall">
       <img class="walls" id="wallRight" src="assets/images/wall.png" alt="concrete brick wall">
-    </div>
+    </div> -->
 
-    <!-- ** GARDEN ** -->
+    <!-- ** GARDEN ** -- >
     <div id="gardenPage">
     </div>
-
+    -->
 
     <!-- ** GREENHOUSE ** -->
-    <div id="greenhousePage">
+    <div id="greenPage">
+      <img class="walls" id="wallRight" src="assets/images/wall.png" alt="concrete brick wall">
+
+      <div id="modal">
+        <span onclick="document.getElementById('modal').style.display='none'" class="close">&times;</span>
+        <p></p>
+      </div>
+
+      <img id="shed" src="assets/images/shed_small.png" alt="greenhouse">
+      <img id="upload-arrow" src="assets/images/upload_arrow.gif" alt="upload">
+
+      <!--<div id="modal"></div>-->
     </div>
 
-    <!-- ** INFORMATION PAGE ** -->
+    <!-- ** INFORMATION PAGE ** -- >
     <div id="infoPage">
+      <img class="walls" id="wallLeft" src="assets/images/wall.png" alt="concrete brick wall">
     </div>
+    -->
 
   </div>
 
