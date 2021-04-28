@@ -31,11 +31,17 @@ let flowerMonth;
 let flowerDay;
 let flowerSeason;
 
+let dropZone;
+
+function preload() {
+  dropZone = createImg('assets/images/shed_small.png');
+}
+
 function setup() {
+  noCanvas();
   // Creates a canvas
-  var dropZone = createCanvas(windowWidth, windowHeight);
-  dropZone.parent('p5Canvas');
-  background(0);
+  dropZone.id('shed');
+  //dropZone.parent('p5Canvas');
   clear();
   // Adds an event for when a file is dropped onto the canvas
   dropZone.drop(gotFile);
@@ -63,6 +69,9 @@ $(function () {
   $("#tooltip-c").tooltip({
     track: true
   });
+  $("#tooltip-d").tooltip({
+    track: true
+  });
 });
 
 /* gets user location with ipify API */
@@ -80,6 +89,7 @@ $(function getUserLocation() {
     }
   );
 });
+
 
 /* receives dropped file, triggers an event to show that file has been received
 and assigns the files properties to variables (fileSize, fileType & fileDate) */

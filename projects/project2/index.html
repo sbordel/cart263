@@ -10,15 +10,17 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 
   <!-- libraries -->
-  <script src="js/librairies/p5.js"></script>
+  <script src="js/libraries/p5.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
   <!-- JS -->
-  <script src="js/script.js"></script>
   <script src="js/Flowers.js"></script>
-</head>
+  <script src="js/script.js"></script>
 
+</head>
 <body>
 
   <!-- HTML  -->
@@ -29,8 +31,10 @@
           src="assets/images/arrow-left_small.gif" alt="right arrow"></a>
       <a href="#" id="tooltip-b" title="go to entrance"><img class="arrows" id="arrowRight"
           src="assets/images/arrow-right_small.gif" alt="left arrow"></a>
-      <a href="#" id="infoIcon"><img id="infoImage" src="assets/images/replacement_character.svg" alt=""></a>
-    </span >
+      <a href="#" id="tooltip-d" title="what is this?"
+        onclick="document.getElementById('modal').style.display='block'"><img id="infoImage"
+          src="assets/images/question.gif" alt="information button"></a>
+    </span>
 
     <!-- ** INDEX ** -- >
     <div id="indexPage">
@@ -62,14 +66,19 @@
 
       <div id="modal">
         <span onclick="document.getElementById('modal').style.display='none'" class="close">&times;</span>
-        <p></p>
+        <br>
+        <p>drop a file on</p> 
+        <p>the greenhouse</p>
+        <p>to plant a flower</p> 
+        <p>in the garden!</p>
       </div>
 
-      <img id="shed" src="assets/images/shed_small.png" alt="greenhouse">
+      <!--<img id="shed" src="assets/images/shed_small.png" alt="greenhouse">-->
       <img id="upload-arrow" src="assets/images/upload_arrow.gif" alt="upload">
 
-      <!--<div id="modal"></div>-->
-    </div>
+        <!-- image that appears on succesful file drop -->
+    <img id="imgDropped" src="assets/images/smile.png" alt="organic shaped frame">
+  </div>
 
     <!-- ** INFORMATION PAGE ** -- >
     <div id="infoPage">
