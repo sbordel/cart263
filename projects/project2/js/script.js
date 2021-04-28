@@ -34,15 +34,14 @@ let flowerSeason;
 let dropZone;
 
 function preload() {
+  //load greenhouse image as "dropZone"
   dropZone = createImg('assets/images/shed_small.png');
 }
 
 function setup() {
   noCanvas();
-  // Creates a canvas
+  //give dropZone the #shed ID
   dropZone.id('shed');
-  //dropZone.parent('p5Canvas');
-  clear();
   // Adds an event for when a file is dropped onto the canvas
   dropZone.drop(gotFile);
   //load json file with flower data
@@ -60,16 +59,7 @@ function draw() {
 
 /* makes tooltips appear on hover */
 $(function () {
-  $("#tooltip-a").tooltip({
-    track: true
-  });
-  $("#tooltip-b").tooltip({
-    track: true
-  });
-  $("#tooltip-c").tooltip({
-    track: true
-  });
-  $("#tooltip-d").tooltip({
+  $(document).tooltip({
     track: true
   });
 });
@@ -89,7 +79,6 @@ $(function getUserLocation() {
     }
   );
 });
-
 
 /* receives dropped file, triggers an event to show that file has been received
 and assigns the files properties to variables (fileSize, fileType & fileDate) */
@@ -129,9 +118,8 @@ function splicedDate() {
 function flowerSelect() {
   let flowerPetals = flowerData.flower[11].petals;
   if (fileSizeLgt == flowerPetals) {
-
   } else if (fileSizeLgt == 0 || fileSizeLgt >= 10) {
-
+    //*************** */
   };
 }
 

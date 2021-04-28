@@ -24,7 +24,17 @@ html {
   #header {
     z-index: 7;
   }
-  /***** INDEX *****/
+  .loadingIcon{
+
+  }
+  /**** PAGE LAYOUT *****/
+  #gardenBody{
+    background-image: url('../assets/images/background_3.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 1;
+}
   #indexPage, #greenPage, #infoPage{
     position: absolute; 
     left: 0; 
@@ -34,6 +44,7 @@ html {
     width: 100vw;
     height: 100vh;
   }
+  /***** HEADER *****/
   #arrowLeft{
     position: absolute; 
     padding: 30px;
@@ -75,13 +86,10 @@ html {
     border-radius: 0%;
     z-index: 7;
 }
-/*
-.ui-tooltip-content{
-  font-style: italic;
-}*/
   .ui-helper-hidden-accessible{
     visibility: hidden;
 }
+  /***** INDEX *****/
   #flowerField{
     position: absolute; 
     width: 42vw;
@@ -148,20 +156,11 @@ html {
     margin-right: 20vw;
     margin-top: 5vw;
     box-shadow: 5px 5px 40px #0000007a;
-    z-index: 4;
+    z-index: 5;
   }
   #modal p{
     font-family: 'CP437';
   } 
-  /*
-  #shed{
-    position: absolute;
-    width: 45%;
-    padding: 5vw;
-    margin-left: 6vw;
-    bottom: 4vh;
-    z-index: 3;
-  }*/
   #shed{
     position: absolute;
     width: 45%;
@@ -169,6 +168,9 @@ html {
     bottom: 8vh;
     left: 10vw;
     z-index: 3;
+  }
+  #shed:hover{
+    opacity: 0.5;
   }
   #imgDropped{
     display: none;
