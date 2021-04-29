@@ -5,7 +5,7 @@
 html {
     width: auto;
     height: auto;
-    background-image: url('../assets/images/background_2.png');
+    background-image: url('../assets/images/background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -22,7 +22,7 @@ html {
     z-index: 1;
   }
   #gardenBody{
-    background-image: url('../assets/images/background_3.png');
+    background-image: url('../assets/images/background_g.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

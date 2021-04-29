@@ -7,6 +7,8 @@ Samuelle Bordeleau
 
 "use strict";
 
+// VARIABLES
+//
 /* variable assigned to a file that is dropped in the drop zone */
 let droppedFile;
 
@@ -34,11 +36,16 @@ let flowerSeason;
 let dropZone;
 let loadImg;
 
+
+// PRELOAD()
+//
 function preload() {
   //load greenhouse image as "dropZone"
   dropZone = createImg('assets/images/shed_small.png');
 }
 
+// SET UP()
+//
 function setup() {
   noCanvas();
   //give dropZone the #shed ID
@@ -49,23 +56,28 @@ function setup() {
   flowerData = loadJSON('assets/data/flowers.json');
 }
 
-/* canvas resizes when window is resized */
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
+// DRAW()
+//
 function draw() {
   noLoop();
 }
 
-/* makes tooltips appear on hover */
+// GENERAL DOC FUNCTIONS
+//
+// canvas resizes when window is resized 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+// makes tooltips appear on hover 
 $(function () {
   $(document).tooltip({
     track: true
   });
 });
 
-/* gets user location with ipify API */
+// GET USER LOCATION
+//
+// gets user location with ipify API 
 $(function getUserLocation() {
   $.getJSON("https://geo.ipify.org/api/v1?apiKey=at_OZGboRjmnwnVC8rVin6gnzz0BOWWQ",
     function (text) {
@@ -81,6 +93,8 @@ $(function getUserLocation() {
   );
 });
 
+// GET DROPPED FILE
+//
 /* receives dropped file, triggers an event to show that file has been received
 and assigns the files properties to variables (fileSize, fileType & fileDate) */
 function gotFile(file) {
@@ -109,7 +123,9 @@ function gotFile(file) {
   mapflowerSeasons();
 };
 
-/* splices the droppedFile's timestamp into corresponding time property variables */
+// FILE & FLOWER DATA
+//
+// splices the droppedFile's timestamp into corresponding time property variables 
 function splicedDate() {
   fileYear = fileDate.getFullYear(); // YYYY
   fileMonth = fileDate.getMonth(); // 0-11
@@ -124,7 +140,7 @@ function flowerSelect() {
   };
 }
 
-/* assigns flowerData date/time properties to variables */
+// assigns flowerData date/time properties to variables 
 function mapflowerSeasons() {
   //assigns day property to flowerDay
   flowerDay = flowerData.flower[11].day;
