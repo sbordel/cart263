@@ -9,35 +9,39 @@ Samuelle Bordeleau
 
 // VARIABLES
 //
-/* variable assigned to a file that is dropped in the drop zone */
+// file that is dropped in the drop zone 
 let droppedFile;
-
-/* variables for droppedFile properties */
+// file properties (droppedFile)
 let fileSize; // number
 let fileType; // string
 let fileDate; // date
-
-/* variables for droppedFile date properties */
+// file date properties (droppedFile)
 let fileYear;
 let fileMonth;
 let fileDay;
-
-/* variables for user's location et access  */
+// user location and access date  
 let userCountry;
 let userRegion;
 let userAccessDate;
-
-/* variables each flower's properties (flowerData) */
-let flowerData;
+// flower properties (flowerJSON) 
+let flowerJSON;
 let flowerMonth;
 let flowerDay;
 let flowerSeason;
-
+// drawing properties 
+let drawingFlower;
+let drawingName;
+let drawingDate;
+let drawingLocation;
+//
 let dropZone;
 let loadImg;
-
 let pageURL;
 
+let chosenFlowers = [];
+let seasonChosen ='';
+
+//const parsedJSON = JSON.parse(flowerJSON);
 
 // PRELOAD()
 //
@@ -49,13 +53,14 @@ function preload() {
 // SET UP()
 //
 function setup() {
-  noCanvas();
+  //let canvas = createCanvas(window)
+  //noCanvas();
   //give dropZone the #shed ID
   dropZone.id('shed');
   // Adds an event for when a file is dropped onto the canvas
   dropZone.drop(gotFile);
   //load json file with flower data
-  flowerData = loadJSON('assets/data/flowers.json');
+  flowerJSON = loadJSON('assets/data/flowers.json');
   //check page URL and display content accordingly
   pageURL = window.location.href.split('/')[3];
   if (pageURL == "greenhouse.html") {
@@ -67,7 +72,6 @@ function setup() {
 }
 
 // DRAW()
-//
 function draw() {
   noLoop();
 }
@@ -127,10 +131,17 @@ function gotFile(file) {
   let fileSizeLgt = fileSize.length;
   fileType = file.type;
   fileDate = file.file.lastModifiedDate;
-  console.log(fileSizeLgt);
+  //console.log(fileSizeLgt);
   // triggers event that splices file timestamp
-  splicedDate();
-  mapflowerSeasons();
+  //splicedDate();
+  //mapflowerSeasons();
+  flowerSelect(fileDate.getMonth(),fileDate.getDate());
+  console.log(chosenFlowers);
+  console.log(seasonChosen);
+  localStorage.setItem("chosenSeason",seasonChosen);
+  localStorage.setItem("flowerArray",JSON.stringify(chosenFlowers));
+  window.location = ('garden.html');
+
 };
 
 // FILE & FLOWER DATA
@@ -142,27 +153,43 @@ function splicedDate() {
   fileDay = fileDate.getDate(); // 1-31
 };
 
-function flowerSelect() {
-  let flowerPetals = flowerData.flower[11].petals;
-  if (fileSizeLgt == flowerPetals) {
-  } else if (fileSizeLgt == 0 || fileSizeLgt >= 10) {
+function flowerSelect(fileMonth, fileDay) {
+  //console.log("file month: "+fileMonth);
+  //let flowerPetals = flowerJSON.flower[11].petals;
+  //if (fileSizeLgt == flowerPetals) {
+  //} else if (fileSizeLgt == 0 || fileSizeLgt >= 10) {
     /***************  add stuff here ~~~~ */
-  };
-}
+  //};
 
-// assigns flowerData date/time properties to variables 
+  for (let i =0; i< flowerJSON.flower.length; i++ ){
+    let flowerPetals = parseInt(flowerJSON.flower[i].petals[0]);
+    if(flowerPetals===fileMonth){
+      let flowerDay = parseInt(flowerJSON.flower[i].day[0]);
+      //console.log("flowerDay::"+flowerDay);
+      //console.log("day::"+fileDay);
+      seasonChosen = flowerSeasons(fileMonth, fileDay);
+      chosenFlowers.push(flowerJSON.flower[i]);
+
+    }
+   
+  }
+  
+
+}
+// assigns flowerJSON date/time properties to variables 
 function mapflowerSeasons() {
   //assigns day property to flowerDay
-  flowerDay = flowerData.flower[11].day;
+  flowerDay = flowerJSON.flower[11].day;
   // remaps the "hour" property of a flower to a value between the range of 0-11 (corresponding to the 12 months)
   // assigns numeral value monthDecimal
-  let monthDecimal = map(flowerData.flower[11].hour, 0, 23, 0, 11);
+  let monthDecimal = map(flowerJSON.flower[11].hour, 0, 23, 0, 11);
   flowerMonth = parseInt(monthDecimal); //convert result to integer and assigns it to flowerMonth
-  flowerSeasons();
+  //flowerSeasons();
 };
 
 /* TO SHRINK */
-function flowerSeasons() {
+function flowerSeasons(flowerMonth, flowerDay) {
+
   // spring == march 20 to june 21
   if ((flowerMonth == 3 && flowerDay >= 20 && flowerDay <= 31)
     || (flowerMonth == 4 && flowerDay >= 1 && flowerDay <= 30)
@@ -188,8 +215,24 @@ function flowerSeasons() {
   else if ((flowerMonth == 11 && flowerDay >= 21 && flowerDay <= 31)
     || (flowerMonth == 0 && flowerDay >= 1 && flowerDay <= 31)
     || (flowerMonth == 1 && flowerDay >= 1 && flowerDay <= 31)
-    || (flowerMonth == 3 && flowerDay >= 1 && flowerDay <= 20)) {
-    flowerSeason = "Winter";
+    || (flowerMonth == 2 && flowerDay >= 1 && flowerDay <= 31)) {
+      flowerSeason = "Winter";
   }
-  console.log(flowerSeason);
+  return(flowerSeason)
 };
+
+/*
+let flowerData = {
+  petals: ``,
+  stem: ``,
+  button: ``,
+  leaf: ``,
+  day: ``,
+  hour: ``,
+  drawing: ``
+};
+
+function drawingTooltip(){
+  let drawingFlower.title = "This flower was planted" + drawingDate + " in " + drawingLocation
+}
+*/

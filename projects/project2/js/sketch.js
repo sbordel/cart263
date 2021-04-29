@@ -7,15 +7,15 @@ Sam Bordeleau
 
 ***************** */
 
-let flowerData;
+let flowerJSON;
 
 function setup() {
 //create canvas and make background transparent
     createCanvas(windowWidth, windowHeight);
     clear();
 
-    flowerData = loadJSON('assets/data/flowers.json', drawFlowers);
-    console.log(flowerData.key)
+    flowerJSON = loadJSON('assets/data/flowers.json', drawFlowers);
+    console.log(flowerJSON.key)
   }
 
 function drawFlowers(data){
