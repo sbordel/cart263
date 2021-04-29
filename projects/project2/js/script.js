@@ -33,6 +33,11 @@ let flowerSeason;
 
 let dropZone;
 
+let indexPage = document.getElementById('indexPage');
+let gardenPage = document.getElementById('gardenPage');
+let housePage = document.getElementById('housePage');
+let infoPage = document.getElementById('infoPage');
+
 function preload() {
   //load greenhouse image as "dropZone"
   dropZone = createImg('assets/images/shed_small.png');
@@ -56,6 +61,27 @@ function windowResized() {
 function draw() {
   noLoop();
 }
+
+$(function () {
+  document.getElementById('gardenPage').onclick = function displayGarden() {
+    indexPage.style('display', 'none');
+    housePage.style('display', 'none');
+    infoPage.style('display', 'none');
+    gardenPage.style('display', 'block');
+  };
+  document.getElementById('housePage').onclick = function displayHouse() {
+    indexPage.style('display', 'none');
+    gardenPage.style('display', 'none');
+    infoPage.style('display', 'none');
+    housePage.style('display', 'block');
+  };
+  document.getElementById('infoPage').onclick = function displayInfo() {
+    indexPage.style('display', 'none');
+    housePage.style('display', 'none');
+    gardenPage.style('display', 'none');
+    infoPage.style('display', 'block');
+  };
+});
 
 /* makes tooltips appear on hover */
 $(function () {
@@ -119,7 +145,7 @@ function flowerSelect() {
   let flowerPetals = flowerData.flower[11].petals;
   if (fileSizeLgt == flowerPetals) {
   } else if (fileSizeLgt == 0 || fileSizeLgt >= 10) {
-    //*************** */
+    /***************  add stuff here ~~~~ */
   };
 }
 

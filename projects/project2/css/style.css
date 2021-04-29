@@ -21,21 +21,20 @@ html {
     overflow: hidden;
     z-index: 1;
   }
-  #header {
+  #gardenBody{
+    background-image: url('../assets/images/background_3.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .header{
     z-index: 7;
   }
   .loadingIcon{
 
   }
   /**** PAGE LAYOUT *****/
-  #gardenBody{
-    background-image: url('../assets/images/background_3.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    z-index: 1;
-}
-  #indexPage, #greenPage, #infoPage{
+  #indexPage, #housePage, #infoPage{
     position: absolute; 
     left: 0; 
     right: 0; 
@@ -54,20 +53,41 @@ html {
   #arrowRight{
     position: absolute; 
     padding: 30px;
-    right: 0;z-index: 5;
+    right: 0;
+    z-index: 5;
   }
   .arrows:hover{
     filter:drop-shadow(5px 5px 10px #282f5e);
     z-index: 5;
   }
-  #infoImage {
+  #infoIcon {
     position: absolute; 
     padding: 30px;
-    right: 75px;
+    right: 80px;
     z-index: 4;
   }
-  #infoImage:hover{
+  #infoIcon:hover{
     filter:drop-shadow(5px 5px 10px #282f5e);
+    z-index: 4;
+  }
+  #gardenIcon {
+    position: absolute; 
+    padding: 30px;
+    right: 160px;
+    z-index: 4;
+  }
+  #gardenIcon:hover{
+    filter: invert(100%);
+    z-index: 4;
+  }
+  #indexIcon {
+    position: absolute; 
+    padding: 30px;
+    right: 0;
+    z-index: 4;
+  }
+  #indexIcon:hover{
+    filter: invert(100%);
     z-index: 4;
   }
   .ui-tooltip {
@@ -163,6 +183,7 @@ html {
   } 
   #shed{
     position: absolute;
+    visibility: hidden;
     width: 45%;
     padding: 2vw;
     bottom: 8vh;
