@@ -36,6 +36,8 @@ let flowerSeason;
 let dropZone;
 let loadImg;
 
+let pageURL;
+
 
 // PRELOAD()
 //
@@ -54,6 +56,14 @@ function setup() {
   dropZone.drop(gotFile);
   //load json file with flower data
   flowerData = loadJSON('assets/data/flowers.json');
+  //check page URL and display content accordingly
+  pageURL = window.location.href.split('/')[3];
+  if (pageURL == "greenhouse.html") {
+    dropZone.style('display', 'block');
+  }
+  else {
+    dropZone.style('display', 'none');
+  }
 }
 
 // DRAW()

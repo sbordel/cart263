@@ -186,7 +186,7 @@ html {
   } 
   #shed{
     position: absolute;
-    visibility: hidden;
+    display: none;
     width: 45%;
     padding: 2vw;
     bottom: 8vh;
@@ -226,4 +226,14 @@ html {
   /* P5 CANVAS */
  
   /***** INFO PAGE *****/
- 
+  #infoBox{
+    position: absolute; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 10px;
+    width: 50%;
+    left: 40vw; ; 
+    right: 0; 
+    bottom: 50vh;
+    z-index: 1;
+  }
