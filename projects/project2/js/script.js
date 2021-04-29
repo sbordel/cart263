@@ -32,11 +32,7 @@ let flowerDay;
 let flowerSeason;
 
 let dropZone;
-
-let indexPage = document.getElementById('indexPage');
-let gardenPage = document.getElementById('gardenPage');
-let housePage = document.getElementById('housePage');
-let infoPage = document.getElementById('infoPage');
+let loadImg;
 
 function preload() {
   //load greenhouse image as "dropZone"
@@ -61,27 +57,6 @@ function windowResized() {
 function draw() {
   noLoop();
 }
-
-$(function () {
-  document.getElementById('gardenPage').onclick = function displayGarden() {
-    indexPage.style('display', 'none');
-    housePage.style('display', 'none');
-    infoPage.style('display', 'none');
-    gardenPage.style('display', 'block');
-  };
-  document.getElementById('housePage').onclick = function displayHouse() {
-    indexPage.style('display', 'none');
-    gardenPage.style('display', 'none');
-    infoPage.style('display', 'none');
-    housePage.style('display', 'block');
-  };
-  document.getElementById('infoPage').onclick = function displayInfo() {
-    indexPage.style('display', 'none');
-    housePage.style('display', 'none');
-    gardenPage.style('display', 'none');
-    infoPage.style('display', 'block');
-  };
-});
 
 /* makes tooltips appear on hover */
 $(function () {
