@@ -52,6 +52,7 @@ function setup() {
   noCanvas();
   //give dropZone the #shed ID
   dropZone.id('shed');
+  dropZone.attribute('title','drag and drop a file on the greenhouse to plant a flower in the garden!');
   // Adds an event for when a file is dropped onto the canvas
   dropZone.drop(gotFile);
   //load json file with flower data
