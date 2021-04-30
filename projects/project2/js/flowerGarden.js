@@ -13,7 +13,7 @@ let chosenSeason;
 
 function setup() {
   //create canvas and make background transparent
-  let canvas = createCanvas(windowWidth / 1.1, windowHeight / 1.1);
+  let canvas = createCanvas(windowWidth / 1, windowHeight / 1.2);
   clear(); // transparent canvas
   canvas.parent('p5Canvas');
   // get stored season of current flower
@@ -35,7 +35,7 @@ function draw() {
 //
 // canvas resizes when window is resized 
 function windowResized() {
-  canvas = resizeCanvas(windowWidth / 1.2, windowHeight / 1.1);
+  canvas = resizeCanvas(windowWidth / 1, windowHeight / 1.2);
 };
 // makes tooltips appear on hover 
 $(function () {
