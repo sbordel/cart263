@@ -3,57 +3,58 @@
 WELCOME TO THE ELECTRIC GARDEN
 Sam Bordeleau
 
+script file for garden page
+obtains a list containing flowers from local storage and display them in the garden.
 (see README file for credits)
 
 ***************** */
-
 
 let chosenSeason;
 
 function setup() {
   //create canvas and make background transparent
   createCanvas(windowWidth, windowHeight);
-  clear();
-  //
+  clear(); // transparent canvas
+  // get stored season of current flower
   chosenSeason = parseInt(localStorage.getItem("chosenSeason"));
+  // get stored flower list
   var flowerList = JSON.parse(localStorage.getItem("flowerList"));
   console.log(flowerList);
-
   // if the array contains objects, draw the flowers
   if (flowerList != null) {
     gotFlower(flowerList);
   }
-}
+};
 
 // GENERAL DOC FUNCTIONS
 //
 // canvas resizes when window is resized 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-}
+};
 // makes tooltips appear on hover 
 $(function () {
   $(document).tooltip({
     track: true
   });
 });
-
 // when clear button is pressed, clear local storage and refresh page
 function clearData() {
   localStorage.clear();
   window.location.reload(true); 
-
-}
-
+};
+// 
 function flowerSelect(fileMonth, fileDay) {
   for (let i = 0; i < flowerJSON.flower.length; i++) {
     let flowerPetals = parseInt(flowerJSON.flower[i].petals[0]);
   }
-}
+};
 
+// DRAW FLOWERS
+//
 function gotFlower(flowerList) {
   noFill();
-  stroke(0);
+  stroke(0); 
   console.log(flowerList);
   // draw every flower in the flower list according to its object properties
   for (let i = 0; i < flowerList.length; i++) {
@@ -68,9 +69,9 @@ function gotFlower(flowerList) {
     }
     endShape();
   }
-}
+};
 
-
+// DRAW()
 function draw() {
   noLoop();
 }

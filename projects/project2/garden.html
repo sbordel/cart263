@@ -18,21 +18,22 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
     integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 </head>
-
 <body id="gardenBody">
   <!-- HTML  -->
   <!-- loading image -- >
     <div id="p5_loading" class="loadingIcon">
-      <img src="assets/images/loading.gif">
+      <img src="assets/images/loading.gif" onload="hideLoad()">
     </div>-->
 
   <!-- ** garden ** -->
   <div id="htmlCanvas">
-
+    <!-- header containing buttons to change page or perform actions -->
     <span class="header" id="gardenHeader">
-      <a title="clear garden" onclick="clearData()"><img id="gardenIcon" src="assets/images/entrance-icon.gif"></a>
-      <a href="index.html" id="tooltip-e indexPage" title="return to the entrance"><img id="indexIcon"
-          src="assets/images/entrance-icon.gif" alt="garden button"></a>
+      <a href="greenhouse.html" id="tooltip-e" title="return to greenhouse"><img id="houseIcon"
+        src="assets/images/entrance-icon.gif" alt="index button"></a>
+      <a title="𝙘𝙡𝙚𝙖𝙧 𝙜𝙖𝙧𝙙𝙚𝙣" onclick="clearData()"><img id="cutIcon" src="assets/images/cut-icon.gif" alt="cut button"></a>
+          <a href="index.html" id="tooltip-b" title="go to entrance"><img class="arrows" id="arrowRight"
+            src="assets/images/arrow-right-icon.gif" alt="right arrow"></a>
     </span>
 
     <!-- (P5 CANVAS) -->
@@ -43,5 +44,4 @@
     <script src="js/Flowers.js"></script>
     <script src="js/flowerGarden.js"></script>
 </body>
-
 </html>

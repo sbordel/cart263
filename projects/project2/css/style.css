@@ -21,6 +21,7 @@ html {
     overflow: hidden;
     z-index: 1;
   }
+  /* background for garden */
   #gardenBody{
     background-image: url('../assets/images/background_g.png');
     background-repeat: no-repeat;
@@ -32,6 +33,7 @@ html {
   }
   .loadingIcon{
     position: absolute;
+    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -46,14 +48,14 @@ html {
     width: 100vw;
     height: 100vh;
   }
-  /***** HEADER *****/
+  /***** HEADER CONTAINING BUTTONS *****/
   #arrowLeft{
     position: absolute; 
     padding: 30px;
     left: 0;
     z-index: 5;
   }
-  #arrowRight{
+  #arrowRight, #cutIcon{
     position: absolute; 
     padding: 30px;
     right: 0;
@@ -63,13 +65,18 @@ html {
     filter:drop-shadow(5px 5px 10px #282f5e);
     z-index: 5;
   }
-  #infoIcon {
+   /***** GREENHOUSE and/or GARDEN BUTTONS *****/
+  #infoIcon, #cutIcon {
     position: absolute; 
     padding: 30px;
     right: 80px;
     z-index: 4;
   }
   #infoIcon:hover{
+    filter:drop-shadow(5px 5px 10px #282f5e);
+    z-index: 4;
+  }
+  #cutIcon:hover{
     filter:drop-shadow(5px 5px 10px #282f5e);
     z-index: 4;
   }
@@ -83,16 +90,18 @@ html {
     filter: invert(100%);
     z-index: 4;
   }
-  #indexIcon {
+  #houseIcon {
     position: absolute; 
     padding: 30px;
-    right: 0;
+    padding-top: 25px;
+    right: 160px;
     z-index: 4;
   }
-  #indexIcon:hover{
+  #houseIcon:hover{
     filter: invert(100%);
     z-index: 4;
   }
+  /* tooltip that appears on Icon hover */
   .ui-tooltip {
     display: inline;
     content: "";
@@ -161,9 +170,6 @@ html {
     margin-right: 0vw;
     bottom: 6vh;
   }
-  /***** GARDEN *****/
-
-
   /***** GREENHOUSE *****/
   #modal {
     display: none;
@@ -223,8 +229,6 @@ html {
   .close:hover{
     cursor: pointer;
   }
-  /* P5 CANVAS */
- 
   /***** INFO PAGE *****/
   #infoBox{
     position: absolute; 
@@ -237,3 +241,5 @@ html {
     bottom: 50vh;
     z-index: 1;
   }
+    /* P5 CANVAS */
+    ****
