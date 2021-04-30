@@ -12,9 +12,10 @@ Samuelle Bordeleau
 // file that is dropped in the drop zone 
 let droppedFile;
 // file properties (droppedFile)
-let fileSize; // number
-let fileType; // string
-let fileDate; // date
+let fileSize; 
+let fileSizeLgt;
+let fileType; 
+let fileDate; 
 // file date properties (droppedFile)
 let fileYear;
 let fileMonth;
@@ -58,7 +59,7 @@ function setup() {
   //load json file with flower data
   flowerJSON = loadJSON('assets/data/flowers.json');
   //check page URL and display content accordingly
-  pageURL = window.location.href.split('/')[3];
+  pageURL = window.location.href.split('/')[6]; // change number to [6] for github pages
   if (pageURL == "greenhouse.html") {
     dropZone.style('display', 'block');
   } // if the active page is greenhouse.html, display shed 
@@ -139,16 +140,20 @@ function gotFile(file) {
     var randomIndex = Math.floor(random(0, chosenFlowers.length));
     console.log(chosenFlowers);
     console.log(randomIndex);
+
+    var flowerList;
+    var randomX = random(windowWidth / 1.2);
+    var randomY = random(windowHeight / 1.4);
     // create an object for every new flower
     // assign it to a random elemnt within the chosen flowers list
     // give it a random position
     var newFlower = {
       'data': chosenFlowers[randomIndex],
-      'offsetX': 10,
-      'offsetY': 10
+      'offsetX': randomX,
+      'offsetY': randomY
     };
     //
-    var flowerList = JSON.parse(localStorage.getItem("flowerList"));
+    flowerList = JSON.parse(localStorage.getItem("flowerList"));
     if (flowerList == null) {
       flowerList = [];
     }
@@ -159,7 +164,13 @@ function gotFile(file) {
     // stringify and store the flower list
     localStorage.setItem("flowerList", JSON.stringify(flowerList));
   }
-  //window.location = ('garden.html');
+  //after 3 seconds load garden.html
+  setTimeout(loadGarden, 3000);
+};
+
+//load garden page once file is uploaded
+function loadGarden(){
+  window.location.href = ('garden.html');
 };
 
 // FILE & FLOWER DATA

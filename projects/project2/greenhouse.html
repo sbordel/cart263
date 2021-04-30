@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -21,18 +21,13 @@
 
 <body>
   <!-- HTML  -->
-    <!-- loading image -->
-    <div id="p5_loading" class="loadingIcon">
-      <img src="assets/images/loading.gif">
-    </div>
-  
-    <!-- ** greenhouse ** -->
+  <!-- ** greenhouse ** -->
   <div id="htmlCanvas">
     <div id="housePage">
-       <!-- header containing buttons to change page or perform actions  -->
+      <!-- header containing buttons to change page or perform actions  -->
       <span class="header" id="houseHeader">
         <a href="index.html" id="tooltip-b indexPage" title="return to entrance"><img class="arrows" id="arrowRight"
-          src="assets/images/arrow-right-icon.gif" alt="left arrow"></a>
+            src="assets/images/arrow-right-icon.gif" alt="left arrow"></a>
         <a id="tooltip-d" onclick="document.getElementById('modal').style.display='block'">
           <img id="infoIcon" src="assets/images/question-icon.gif" alt="information button"></a>
         <a href="garden.html" id="tooltip-e gardenPage" title="go to  garden"><img id="gardenIcon"
@@ -44,24 +39,23 @@
       <div id="modal">
         <span onclick="document.getElementById('modal').style.display='none'" class="close">&times;</span>
         <br>
-        <p><b><em>Welcome to the electric garden's greenhouse!</em></b><br><br>If you would like to add flowers to your personal garden, 
-          you can do so by dropping a file of the shed to your left. If you do not see a ****, 
-        try dropping a different file : )</p>
+        <p><b><em>Welcome to the electric garden's greenhouse!</em></b><br><br>If you would like to add flowers to your
+          personal garden,
+          you can do so by dropping a file of the shed to your left. If you do not see a ****,
+          try dropping a different file : )</p>
       </div>
 
       <img id="upload-arrow" src="assets/images/upload_arrow.gif" alt="upload">
 
       <!-- image that appears on succesful file drop -->
-      <img id="imgDropped" src="assets/images/smile.png" alt="organic shaped frame">
+      <img id="imgDropped" src="assets/images/loading.gif" alt="loading icon">
     </div>
 
-  <!-- (P5 CANVAS) -->
-  <div id="p5Canvas">
-  </div>
+    <!-- (P5 CANVAS) -->
+    <div id="p5Canvas">
+    </div>
 
-  <!-- JS -->
-  <script src="js/Flowers.js"></script>
-  <script src="js/script.js"></script>
+    <!-- JS -->
+    <script src="js/script.js"></script>
 </body>
-
 </html>

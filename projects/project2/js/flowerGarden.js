@@ -13,8 +13,9 @@ let chosenSeason;
 
 function setup() {
   //create canvas and make background transparent
-  createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(windowWidth / 1.1, windowHeight / 1.1);
   clear(); // transparent canvas
+  canvas.parent('p5Canvas');
   // get stored season of current flower
   chosenSeason = parseInt(localStorage.getItem("chosenSeason"));
   // get stored flower list
@@ -26,11 +27,15 @@ function setup() {
   }
 };
 
+// DRAW()
+function draw() {
+};
+
 // GENERAL DOC FUNCTIONS
 //
 // canvas resizes when window is resized 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  canvas = resizeCanvas(windowWidth / 1.2, windowHeight / 1.1);
 };
 // makes tooltips appear on hover 
 $(function () {
@@ -55,6 +60,7 @@ function flowerSelect(fileMonth, fileDay) {
 function gotFlower(flowerList) {
   noFill();
   stroke(0); 
+  strokeWeight(1.3);
   console.log(flowerList);
   // draw every flower in the flower list according to its object properties
   for (let i = 0; i < flowerList.length; i++) {
@@ -70,8 +76,3 @@ function gotFlower(flowerList) {
     endShape();
   }
 };
-
-// DRAW()
-function draw() {
-  noLoop();
-}
