@@ -5,7 +5,7 @@ for CART 263: Creative Computation II
 
 Taking inspiration from Aram Bartholl’s Dead Drops (2010) and Cory Arcangel’s Data Diaries (2003), WELCOME TO THE ELECTRIC GARDEN is an interactive web-based project that stems from values of feminist urbanism (more specifically form the idea of The Commons) and explores concepts of open data, data-driven imagery, and the occupation of virtual spaces. This personal digital garden takes shape through the user’s raw data, repurposed as ‘digital compost’ from which bloom flower-shaped drawings.  
 
-[welcome to the electric garden](https://sbordel.github.io/cart263/projects/project2/index.html)
+[website -->](https://sbordel.github.io/cart263/projects/project2/index.html)
 
 ---
 
