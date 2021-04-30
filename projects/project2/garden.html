@@ -21,25 +21,27 @@
 
 <body id="gardenBody">
   <!-- HTML  -->
-    <!-- loading image -->
+  <!-- loading image -- >
     <div id="p5_loading" class="loadingIcon">
       <img src="assets/images/loading.gif">
-    </div>
-  
+    </div>-->
+
   <!-- ** garden ** -->
   <div id="htmlCanvas">
-      <span class="header" id="gardenHeader">
-            <a href="index.html" id="tooltip-e indexPage" title="return to the entrance"><img id="indexIcon"
-              src="assets/images/entrance-icon.gif" alt="garden button"></a>
-      </span>
 
-  <!-- (P5 CANVAS) -->
-  <div id="p5Canvas">
-  </div>
+    <span class="header" id="gardenHeader">
+      <a title="clear garden" onclick="clearData()"><img id="gardenIcon" src="assets/images/entrance-icon.gif"></a>
+      <a href="index.html" id="tooltip-e indexPage" title="return to the entrance"><img id="indexIcon"
+          src="assets/images/entrance-icon.gif" alt="garden button"></a>
+    </span>
 
-  <!-- JS -->
-  <script src="js/Flowers.js"></script>
-  <script src="js/flowerGarden.js"></script>
+    <!-- (P5 CANVAS) -->
+    <div id="p5Canvas">
+    </div>
+
+    <!-- JS -->
+    <script src="js/Flowers.js"></script>
+    <script src="js/flowerGarden.js"></script>
 </body>
 
 </html>
